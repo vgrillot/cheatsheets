@@ -1,10 +1,9 @@
 Python training
 ==
 
+
 vv
 
-Python  ?
-==
 
 What is Python ?
 --
@@ -18,6 +17,10 @@ What is Python ?
 * _Batteries included_, come with comprehensive standard library
 
 * _Open-source software_, by non profit software generation.
+
+
+vv
+
 
 History
 --
@@ -34,7 +37,9 @@ Benevolent Dictator for Life (BDFL)
 
 Guido just announced his retreat as BDFL.
 
+
 vv
+
 
 What for
 --
@@ -42,6 +47,10 @@ web
 sysadmin
 data analysis, statistics, maths
 scripting
+
+
+vv
+
 
 Who ?
 --
@@ -51,11 +60,19 @@ Who ?
 * Redhat...
 * Blackhole...
 
+
+vv
+
+
 Why at Presto ?
 --
 * Easy to learn
 * Large library set
 * Used for production, automation, and gateway
+
+
+vv
+
 
 Why not at Presto ?
 --
@@ -77,14 +94,18 @@ tyobe...
 Ready ?
 ==
 
+
 vv
+
 
 Interactive Shell
 --
 
 ``python`` with *no argument* is a **console** ...
 
+
 vv
+
 
 Code sample
 --
@@ -103,8 +124,8 @@ no "{ }" either
 > readability count
 
 
+>>
 
-vv
 
 Numbers
 ==
@@ -127,6 +148,9 @@ z = 2+3j	# complex
 bfn = 123**465  # just try it !!
 ```
 
+vv
+
+
 ### Conversions
 ```
 >>>hex(42)
@@ -146,6 +170,9 @@ ValueError: invalid literal for int() with base 10: '0xff'
 ```
 
 
+>>
+
+
 Operators
 ==
 ```
@@ -157,6 +184,9 @@ Operators
 3 & 1 		    # binary
 True or False 	# logic (see #Boolean) 
 ```
+
+
+>>
 
 
 Strings
@@ -191,6 +221,10 @@ SyntaxError: bytes can only contain ASCII literal characters.
 ```
 > remember that all python string are UNICODE by default, UTF-8 encoded.
 
+
+vv
+
+
 Just one more encoding/decoding for comprehension:
 ```
 >>> s = "énorme"
@@ -215,6 +249,8 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xc3 in position 0: ordinal 
 ```
 
 
+vv
+
 
 String formatting
 --
@@ -235,6 +271,9 @@ futur = 20
 print(f"This is definitely {futur*101}")
 ```
 
+vv
+
+
 Common tool:
 --
 ```
@@ -247,6 +286,7 @@ str.isnumeric()
 ```
 
 
+>>
 
 
 List []
@@ -257,9 +297,13 @@ anything = [1, 2.0, "three", obj]
 ```
 Slicing:
  
-``list[i:j]`` : from i (included) to j (excluded)
+``list[i:j:step]`` : from i (included) to j (excluded)
 
 Works also with negative index (from end)
+
+
+vv
+
 
 Quiz
 --
@@ -273,6 +317,9 @@ l[1:] ?
 l[:5] ?
 l[4:4] ?
 ```
+
+
+vv
 
 
 Common tool:
@@ -301,12 +348,20 @@ tuple_list = zip(my_list, other_list)
 
 ```
 
+
+vv
+
+
 List comprehension
 --
 List comprehension is a dedicated syntax to return a new list
 ```
 under_10 = [ n for n in numbers if n <= 10 ]  
 ```
+
+
+vv
+
 
 Exo
 --
@@ -322,6 +377,10 @@ genres= ['f', 'm', 'm', 'm', 'm', 'f']
 * list all even element ?
 * highest element ?
 * list all women
+
+
+vv
+
 
 SOLUCE
 --
@@ -343,6 +402,7 @@ max(numbers)                        # better :)
 ```
 
 
+>>
 
 
 Dictionary {}
@@ -369,6 +429,10 @@ t = 3.14
 
 ```
 
+
+vv
+
+
 ### Common tool
 ```
 #  access
@@ -381,6 +445,10 @@ my_dict.values()  # list of values
 my_dict.items()  # list of tuple (key, value)
 ```
 
+
+vv
+
+
 ### Dict comprehension
 ```
   #  similar to list comprehension, but with a pair:
@@ -389,9 +457,16 @@ my_dict.items()  # list of tuple (key, value)
 ```
 
 
+vv
+
+
 EXO
 --
 Build a dict from previous both list names and genres 
+
+
+vv
+
 
 SOLUCE
 --
@@ -407,9 +482,15 @@ SOLUCE
 >```
 
 
+vv
+
+
 EXO
 --
 Return all men from the previous results
+
+
+vv
 
 
 SOLUCE
@@ -417,6 +498,10 @@ SOLUCE
 ```
 [name for name, genre in people.items() if genre == 'm']
 ```
+
+
+vv
+
 
 More tools
 --
@@ -428,9 +513,11 @@ More tools
 ```
 
 
+>>
+
 
 Tuple {v, ...}
---
+==
 A couple (or more) of any values.
 
 A tuple is not mutable.
@@ -455,6 +542,7 @@ t.pop()  # will fail
 ```
 
 
+>>
 
 
 Set ()
@@ -468,8 +556,10 @@ set(genres)  # will return {'f', 'm'}
 ```
 
 
+vv
 
-#### Common
+
+### Common
 ```
 # getters
 
@@ -488,10 +578,11 @@ my_set.update(<collection>)
 ```
 
 
+>>
 
 
-Boolean evaluation
---
+Booleans
+==
 Everything can be evaluated as a boolean
 
 Just try it:
@@ -514,7 +605,11 @@ bool(None)  # False
 
 ```
 
-### common boolean tool
+vv
+
+
+common boolean tool
+--
 
 ```
 all(<iterable>)
@@ -523,6 +618,9 @@ all(<iterable>)
 ```
 any(<iterable>)
 ```
+
+
+vv
 
 
 If clauses
@@ -548,7 +646,12 @@ if my_string:
     ...    
 ```
 
-### EXO
+
+vv
+
+
+EXO
+--
 gived the following number input list,
 ```
 numbers = [1, 5, 0, None, 8]
@@ -556,7 +659,13 @@ numbers = [1, 5, 0, None, 8]
 
 display the string representation, comma separated, with a default "nop" for 0 or null values.
 
-### SOLUCE
+
+vv
+
+
+SOLUCE
+--
+
 bad:
 ```
 s = ''
@@ -571,7 +680,11 @@ better:
 ```
 
 
-### TIP
+vv
+
+
+Tip
+--
 
 usefull to set a default value
 ```
@@ -585,8 +698,6 @@ usefull to override a value
 [1, 1, 0, None, 1]
 ```
 
-
-
 best:
 ```
 >>> ["yes" if n else "no" for n in numbers]
@@ -596,6 +707,8 @@ best:
 >>> [n and "yes" or "no" for n in numbers]
 ```
 
+
+vv
 
 
 Loops
@@ -614,11 +727,14 @@ for i in range(10):
     
 for elem in [2, 3, 5, 7, 9, 11]:
     print(elem)      
-    
-    
 ```
 
+
+vv
+
+
 ``for`` has also an ``else`` clause:
+
 ```
 all_rings = ['narya', 'nenya', 'vivya', 'sauron']
 for ring in all_rings:
@@ -630,6 +746,9 @@ else:
     print("Hobbits win...")        
           
 ```
+
+
+>>
 
 
 Functions
@@ -646,16 +765,22 @@ def get_username(first_name, last_name):
     return first_name[0] + last_name    # will fail if no first_name!
 ```
     
+
+vv
+
+    
 Arguments with default values:
 ```
 #  add default values
 def get_email(first_name, last_name, domain="presto-eng.com"):
     return f"{first_name[0]}.{last_name}@{domain}"
      
-get_email("darth", "vader", domain="empire.com")   
->>> 'd.vader@empire.com'
+>>> get_email("darth", "vader", domain="empire.com")   
+'d.vader@empire.com'
 ```
 
+
+vv
 
 Lambda, aka anonymous functions
 --
@@ -702,6 +827,9 @@ S
 lambda are used for transformation, sorting, ...
 
 
+vv
+
+
 EXO
 --
 
@@ -715,6 +843,9 @@ EXO
 # TODO: use the sorted build-in function and a labmda to sort numbers by unit
 >>> help(sorted) 
 ```
+ 
+ 
+vv
  
  
 SOLUCE
@@ -731,12 +862,15 @@ sorted(a, key=lambda v:v % 10)
 ```
 
 
+vv
+
+
 Partial functions
 --
 TODO
 
 
-
+>>
 
 
 Splat operator * **
@@ -747,7 +881,8 @@ Splat operator * **
 **          # splatty-splat operator
 ```
 
-### Unpacking data
+Unpacking data
+--
 
 automatic unpacking:
 ```
@@ -755,11 +890,17 @@ it_guys = ["olivier", "david", "ahmed", "louis", "aurelien"]    # famous team :)
 o, d, a, l, r = it_guys    # auto unpacked
 ```
 
-### use splat operator (*) to specify how to unpack list:
+
+use splat operator (*) to specify how to unpack list:
+
 ```
 manager, *peons = it_guys  # use splat operator
 manager, *others, missing = it_guys  # works also in the middle...
 ```
+
+
+EXO
+--
 
 Anyone for a pizza ?
 ```
@@ -787,7 +928,13 @@ make_pizza(*ingredients)    # need to force unpacking
 >>> chorizo
 ```
 
-### splat operator in function declaration
+
+vv
+
+
+splat operator in function declaration
+--
+
 ```
 def list_ingredients(*ingredients):
     for ingredient in ingredients:
@@ -799,6 +946,10 @@ list_ingredients(*ingredients)
 >>> + chorizo        
 ```
 
+
+vv
+
+
 ### using dictionary and splatty-splat operator
 ```
 #  reuse previous get_email() function
@@ -809,10 +960,19 @@ get_email(**luke, domain="rebels.org")
 ```
 
 
-#### EXO:
+vv
+
+
+EXO:
+--
 please improve make_pizza function to allow any optional ingredients
 
-#### SOLUCE 
+
+vv
+
+
+SOLUCE
+-- 
 ```
 def make_pizza(base_item, *optionnal_items):
     print("let's cook")
@@ -826,7 +986,13 @@ make_pizza(*ingredients)
 make_pizza("tomate", "ananas", "banana", "chocolate")      
 ```
 
-### complete function definition
+
+>>
+
+functions
+==
+
+complete function definition
 it's possible to combine all kind of arguments, but the order is mandatory
 * mandatory arguments (arg)
 * optionnal arguments (arg=default)
@@ -856,8 +1022,11 @@ define_team('IT', 'olivier', 'ahmed', 'david', 'MPH')            # is an error
 ```
 
 
+>>
+
+
 Iterator
---
+==
 In python prefer use ``for`` than ``while``
 That's why there is many iterator tools:
 ```
@@ -875,10 +1044,11 @@ next(production_support_duty)
 ```
 
 
+>>
 
 
 Generator
---
+==
 It looks like a function, but it's not !
 ``yield`` keyword replace ``return``
 But you can continue to use return if you want to end the generator
@@ -900,13 +1070,19 @@ A generator is LAZY, computed one item at a time:
 - small computation at a time
 
 
+vv
 
 
-### EXO
+EXO
+--
 Build a traffic lights generator green->orange->red->...
 
 
-### SOLUCE
+vv
+
+
+SOLUCE
+--
 ```
 def traffic_light():
     while True:
@@ -916,8 +1092,12 @@ def traffic_light():
 ```
 
 
+>>
+
+
 Exceptions
---
+==
+> fail first !
 ```
 try:
     <do some code>
@@ -939,28 +1119,42 @@ Main exceptions:
 * IOError (files)
 
 
+>>
+
+
 Regex
+==
+> Do you regex ?
+```
+
+```
+
+
+vv
+
+
+Exo
 --
-Do you regex ?
-```
 
-```
-
-
-
-###exo
 
 named regex explode, 
 
 see exo3-binning
 
 
+vv
 
-###real code sample
+
+real code sample
+--
+
 search in gateway
 part number decoding
 
 see delphi, search 
+
+
+>>
 
 
 Files
@@ -980,6 +1174,12 @@ os.mkdirs(f'logs/{product}/{lot}/{probe}')
 ```
 
 https://realpython.com/working-with-files-in-python/
+
+
+vv
+
+
+Searching a filename
 
 ```
 import fnmatch
@@ -1008,18 +1208,21 @@ for file in glob.glob('**/*.csv', recursive=True):   # recursive
 ```
 
 
+vv
+
+
 Text files
 --
-``open(filename, mode)``
+``obj = open(filename, mode)``
 
-not very good:
+> not very good:
 ```
 f = open(filename, 'r')
 f.readline()
 close(f)
 ```
 
-at least it's safe:
+> at least it's safe:
 ```
 f = open(filename, 'r')
 try:
@@ -1028,8 +1231,7 @@ finally:
     close(f)
 ```
 
-
-pythonic: using context manager (with):
+> pythonic: using context manager (with):
 ```
 with open(filename, 'r') as file:
     for line in file:
@@ -1037,7 +1239,12 @@ with open(filename, 'r') as file:
 ```
 
 
-### common
+vv
+
+
+Common
+--
+
 https://www.pythonforbeginners.com/cheatsheet/python-file-handling
 https://realpython.com/working-with-files-in-python/
 
@@ -1049,6 +1256,9 @@ file.readline()
 file.readlines()
 file.writelines()
 ```
+
+
+vv
 
 
 Csv files
@@ -1071,6 +1281,8 @@ def write_to_csv_file(filename, rows):
 ```
         
 
+vv
+
 
 Excel files
 --
@@ -1080,6 +1292,8 @@ http://sametmax.com/lire-et-ecrire-dans-un-fichier-xls/
 or you can also use `panda package`
 
 
+vv
+
 
 Binaries files
 --
@@ -1088,6 +1302,7 @@ https://gto76.github.io/python-cheatsheet/#struct
 Struct
 Module that performs conversions between Python values and a C struct, represented as a Python bytes object.
 Machine’s native type sizes and byte order are used by default.
+```
 from struct import pack, unpack, iter_unpack, calcsize
 <bytes>  = pack('<format>', <value_1> [, <value_2>, ...])
 <tuple>  = unpack('<format>', <bytes>)
@@ -1099,20 +1314,35 @@ b'\x00\x01\x00\x02\x00\x00\x00\x03'
 (1, 2, 3)
 >>> calcsize('>hhl')
 8
+```
 
 
-###real code sample
+vv
+
+
+Exo
+--
+
+TODO:exo-struct
+
+Real code sample
+--
 stdf output
 nxp input
+
+
+>>
 
 
 Class
 ==
 finally we're talking OOP!
 
-Everything is object...
+> Everything is object...
 
-### introspection
+Introspection
+--
+
 you can directly read information or request help in your code:
 ```
 >>> import struct
@@ -1145,8 +1375,11 @@ DESCRIPTION
     ...
 ```
 
+vv
 
-### class structure
+
+class structure
+--
 
 Let's create a simple PASS/FAIL die result
 ```
@@ -1162,6 +1395,8 @@ class DieResult(object):
 die = DieResult(True)   # a good die        
 ```
 
+
+vv
 
 
 Now we want to extend it to have its position on a wafer:
@@ -1185,6 +1420,10 @@ class WaferDieResult(DieResult):
 True
 ```
 
+
+vv
+
+
 ```
 >>> die
 <__main__.WaferDieResult object at 0x0000023F2BFB4080>       
@@ -1205,7 +1444,11 @@ PASS at (30, 40)
 ```
 
 
-### dunder method
+vv
+
+
+dunder method
+--
 dunder stands for double-underscore,
 all dunder methods are python internals and standard method,
 you can override it when needed
@@ -1220,7 +1463,12 @@ you can override it when needed
         """ comparator """
 ```
 
-### dynamic members
+
+vv
+
+
+dynamic members
+--
 
 ```
 class Person(object):
@@ -1235,7 +1483,13 @@ dir(p)
 # new attributes are displayed.
 ```
 
-### private and protected convention
+
+vv
+
+
+private and protected convention
+--
+
 > "We are all consenting adults"
 
 Everything is public, but there is convention to avoid naming collision:
@@ -1258,23 +1512,29 @@ class Person(object):
         
 ```
  
+ 
+vv
 
-### Don't do a class for everything...
 
-#### Just do it when:
+Don't do a class for everything...
+--
+
+> ### Just do it when:
 > if you have members
 > if you need inheritance
 > if you need to override a behavior
 > context manager (see next slide)
 
-#### No you wont when:
+> ### No you wont when:
 > keep it simple !
 > no member, no inheritance : a package (file) is enough
 > most transformation script don't need it (extract, transform, load)
 
 
-
 http://introtopython.org/classes.html
+
+
+>>
 
 
 Context Manager
@@ -1298,10 +1558,19 @@ except:
     raise 
 ``` 
 
-### See exo-struct, 
+
+vv
+
+
+Exo
+--
+See exo-struct,
+ 
 improve binary file reader/writer.    
     
     
+>>
+
 
 Enum
 ==
@@ -1337,6 +1606,9 @@ print(tools.value)
 ```
 
 
+>>
+
+
 Dataclass
 ==
 Need python >= 3.7
@@ -1362,9 +1634,13 @@ qt1234 = Lot("QT1234", "AB001", "ABACAD", [1,2,3,4,5])
 ```
 
 
+>>
+
+
 Typing
 ==
-You're missing some type information ?
+> You're missing some type information ?
+
 Sometimes it can be usefull...
 (python > 3.5)
 
@@ -1376,6 +1652,9 @@ def hello(name : str) -> str:
 ```
 
 
+>>
+
+
 Logging
 ==
 TODO
@@ -1383,13 +1662,25 @@ TODO
 import logging
 ```
 
+
+>>
+
+
 Unit tests
 ==
 TODO
 
+
+>>
+
+
 Decorators
 ==
 TODO
+
+
+>>
+
 
 DuctTyping
 ==
@@ -1399,24 +1690,38 @@ If it looks like a duck, swims like a duck, and quacks like a duck, then it prob
 http://sametmax.com/quest-ce-que-le-duck-typing-et-a-quoi-ca-sert/
 
 
+>>
+
+
 ArgParse
 ==
 TODO
+
+
+>>
+
 
 Application
 ==
 Build a desktop application with WxPython
 https://wxpython.org/
 
+
+>>
+
+
 funny stuff
 ==
 
-### star war api
+star war api
+--
 
 https://swapi.co/api/people/?format=api
 API to list all SW people 
 https://github.com/phalt/swapi-python
 
+
+>>
 
 
 links
@@ -1436,3 +1741,4 @@ https://www.pythoncentral.io/ --
 http://sametmax.com/ (NSFW!) --
 https://en.wikipedia.org/wiki/Python_(programming_language) --
 https://fr.wikipedia.org/wiki/Guido_van_Rossum --
+http://introtopython.org/classes.html --
