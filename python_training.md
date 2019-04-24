@@ -841,6 +841,11 @@ def my_func():
 def get_username(first_name, last_name):
     return first_name[0] + last_name    # will fail if no first_name!
 ```
+
+```
+>>> get_username('tom', 'jones')
+'tjones'
+```
     
 
 vv
@@ -848,10 +853,15 @@ vv
     
 Arguments with default values:
 ```
-#  add default values
 def get_email(first_name, last_name, domain="presto-eng.com"):
     return f"{first_name[0]}.{last_name}@{domain}"
      
+```
+
+Argument with default value are optionals
+```
+>>> get_email("tom", "jones")
+'t.jones@presto-eng.com'
 >>> get_email("darth", "vader", domain="empire.com")   
 'd.vader@empire.com'
 ```
