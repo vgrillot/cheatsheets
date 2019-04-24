@@ -223,7 +223,7 @@ Specialized string
 >>> raw = r"this is NOT a multi \n line string"
 
 # advanced formatting		    
->>> fmt = f"{name}"		                                
+>>> fmt = f"{<expression>}"		                                
 
 # ok just kidding...it doesn't work in console
 >>> unicode = u"I ❤️ python"                            
@@ -275,27 +275,27 @@ vv
 String formatting
 --
 > %
-
-not deprecated but discouraged...
-
-... but so usefull for basic things !
+_not deprecated but discouraged but so usefull for basic things !_
 ```
-print("This is so %d" % 2010)
-print("%s %s" % ("Hello", "world !"))
+>>> print("This is so %d" % 2010)
+>>> print("%s %s" % ("Hello", "world !"))
 ```
 
+vv
 
-> with more options:
+
+with more options:
 ```
-print("That might be a bit %d".format(2015))
-print("{:>20d}".format(1234))
+>>> print("That might be a bit %d".format(2015))
+>>> print("{:>20d}".format(1234))
 ```
 
-> can do evaluation:
+f-string can do evaluation:
 ```
-futur = 20
-print(f"This is definitely {futur*101}")
+>>> futur = 20
+>>> print(f"This is definitely {futur*101}")
 ```
+
 
 vv
 
@@ -338,21 +338,13 @@ Quiz
 --
 ```
 >>> l = [4, 8, 15, 16, 23, 42]
-
 >>> l[0] 
-
 >>> l[-1] 
-
 >>> l[2:3] 
-
 >>> l[1:] 
-
 >>> l[:5] 
-
 >>> l[4:4] 
-
 >>> l[::2]
-
 >>> l[::-1]
 ```
 
@@ -365,29 +357,14 @@ Answers
 ```
 >>> l = [4, 8, 15, 16, 23, 42]
 
->>> l[0] 
-4
-
->>> l[-1] 
-42
-
->>> l[2:3] 
-15
-
->>> l[1:] 
-[8, 15, 16, 23, 42]
-
->>> l[:5] 
-[4, 8, 15, 16, 23]
-
->>> l[4:4]
-[] 
-
->>> l[::2]
-[4, 15, 23]
-
->>> l[::-1}
-[42, 23, 16, 15, 8, 4]
+>>> l[0]    # 4
+>>> l[-1]   # 42
+>>> l[2:3]  # 15
+>>> l[1:]   # [8, 15, 16, 23, 42]
+>>> l[:5]   # [4, 8, 15, 16, 23]
+>>> l[4:4]  # [] 
+>>> l[::2]  # [4, 15, 23]
+>>> l[::-1} # [42, 23, 16, 15, 8, 4]
 ```
 
 
@@ -397,24 +374,34 @@ vv
 Common tool:
 --
 
+filling
 ```
-#  filling
 my_list.append(elem)
 my_list.insert(i, elem)
+```
 
-#  consuming
+consuming
+```
 i = my_list.index(elem)
 elem = my_list.pop(i)   # .pop() pop the last elem
 my_list.remove(elem)
+```
 
-#  tooling
+
+vv
+
+
+tooling
+```
 my_list.sort()
 my_list.reverse()
 my_list = sorted(<collection>)
 <iter> = reversed(my_list)
 my_list.clear()
+```
 
-#  aggregation
+aggregation
+```
 my_list.extend(<collection>)
 tuple_list = zip(my_list, other_list)
 
@@ -438,8 +425,8 @@ vv
 Exo
 --
 
+initial conditions
 ```
-#  initial conditions
 numbers = [8, 4, 16, 42, 23, 15]
 letters = ['a', 'b', 'c', 'd', 'e']
 names = ['valerie', 'ben', 'brice', 'olivier', 'christelle']
