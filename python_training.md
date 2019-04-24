@@ -480,6 +480,10 @@ other_dict = {
     }
 ```
 
+
+vv
+
+
 Update
 --
 ```
@@ -582,8 +586,6 @@ Tuple {v, ...}
 ==
 A couple (or more) of any values.
 
-A tuple is not mutable.
-
 ```
 t = {4, 2}  # remember, this is not a dictionnary...
 ```
@@ -597,6 +599,10 @@ Easy swap:
 ```
 a, b = b, a
 ```
+
+
+vv
+
 
 Similar to a list, but a tuple is immutable, so you can't change it.
 ```
@@ -621,15 +627,16 @@ set(genres)  # will return {'f', 'm'}
 vv
 
 
-### Common
+Common
+--
+getters
 ```
-# getters
-
 my_set.add(elem)
 my_set.update(<collection>)
+```
 
-
-#  comparaison
+comparison
+```
 <set>  = <set>.union(<coll.>)                 # Or: <set> | <set>
 <set>  = <set>.intersection(<coll.>)          # Or: <set> & <set>
 <set>  = <set>.difference(<coll.>)            # Or: <set> - <set>
@@ -646,6 +653,10 @@ my_set.update(<collection>)
 Booleans
 ==
 Everything can be evaluated as a boolean
+
+
+vv
+
 
 Just try it:
 
@@ -674,11 +685,11 @@ common boolean tool
 --
 
 ```
-all(<iterable>)
+all(<iterable>)  #  True if all items are true
 ```
 
 ```
-any(<iterable>)
+any(<iterable>)  #  True if any item is true
 ```
 
 
@@ -721,6 +732,10 @@ numbers = [1, 5, 0, None, 8]
 
 display the string representation, comma separated, with a default "nop" for 0 or null values.
 
+```
+expected = ['1', '5', 'nop', 'nop', '8']
+```
+
 
 vv
 
@@ -745,7 +760,7 @@ better:
 vv
 
 
-Tip
+Hint
 --
 
 usefull to set a default value
@@ -770,11 +785,11 @@ best:
 ```
 
 
-vv
+>>
 
 
 Loops
---
+==
 ```
 while <condition>:
     <code>
