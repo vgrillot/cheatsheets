@@ -1,7 +1,7 @@
 Intro
 ==
 
-![](img/python-logo-master-v3-TM.png)
+![python](img/python-logo-master-v3-TM.png)
 
 vv
 
@@ -219,10 +219,17 @@ More strings...
 
 Specialized string
 ```
->>> raw = r"this is NOT a multi \n line string"		    # raw string
->>> fmt = f"{name}"		                                # advanced formatting
->>> unicode = u"I ❤️ python"                            # ok just kidding...it doesn't work in console
->>> ascii = b"plain ASCII literal chars"                # byte-array filled with char, but it's BYTES !!
+# raw string
+>>> raw = r"this is NOT a multi \n line string"
+
+# advanced formatting		    
+>>> fmt = f"{name}"		                                
+
+# ok just kidding...it doesn't work in console
+>>> unicode = u"I ❤️ python"                            
+
+# byte-array filled with char, but it's BYTES !!
+>>> ascii = b"plain ASCII literal chars"                
 ```
 
 byte-array (or bytes) are not string:
@@ -236,7 +243,7 @@ SyntaxError: bytes can only contain ASCII literal characters.
 vv
 
 
-Just one more encoding/decoding for comprehension:
+Just one more encoding/decoding:
 ```
 >>> s = "énorme"
 >>> b = s.encode("utf-8")
@@ -245,6 +252,8 @@ b'\xc3\xa9norme'
 ```
 
 b is the binary representation of "énorme" using UTF-8 encoding.
+
+vv
 
 Now try to decode it:
 ```
@@ -265,19 +274,25 @@ vv
 
 String formatting
 --
+> %
+
+not deprecated but discouraged...
+
+... but so usefull for basic things !
 ```
-# %
 print("This is so %d" % 2010)
 print("%s %s" % ("Hello", "world !"))
-#  not deprecated but discouraged...
-#  ... but so usefulle for basic things !
+```
 
 
-#  with more options:
+> with more options:
+```
 print("That might be a bit %d".format(2015))
 print("{:>20d}".format(1234))
+```
 
-#  can do evaluation:
+> can do evaluation:
+```
 futur = 20
 print(f"This is definitely {futur*101}")
 ```
@@ -302,11 +317,14 @@ str.isnumeric()
 
 List []
 ==
+
 Simple arrays with any values type, can be mixed:
 ```
 anything = [1, 2.0, "three", obj]
 ```
+
 Slicing:
+--
  
 ``list[i:j:step]`` : from i (included) to j (excluded)
 
@@ -319,14 +337,57 @@ vv
 Quiz
 --
 ```
-numbers = [4, 8, 15, 16, 23, 42]
-# QUIZ !
-l[0] ?
-l[-1] ?
-l[2:3] ?
-l[1:] ?
-l[:5] ?
-l[4:4] ?
+>>> l = [4, 8, 15, 16, 23, 42]
+
+>>> l[0] 
+
+>>> l[-1] 
+
+>>> l[2:3] 
+
+>>> l[1:] 
+
+>>> l[:5] 
+
+>>> l[4:4] 
+
+>>> l[::2]
+
+>>> l[::-1]
+```
+
+
+vv
+
+
+Answers
+--
+```
+>>> l = [4, 8, 15, 16, 23, 42]
+
+>>> l[0] 
+4
+
+>>> l[-1] 
+42
+
+>>> l[2:3] 
+15
+
+>>> l[1:] 
+[8, 15, 16, 23, 42]
+
+>>> l[:5] 
+[4, 8, 15, 16, 23]
+
+>>> l[4:4]
+[] 
+
+>>> l[::2]
+[4, 15, 23]
+
+>>> l[::-1}
+[42, 23, 16, 15, 8, 4]
 ```
 
 
