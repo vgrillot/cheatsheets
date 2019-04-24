@@ -2,14 +2,14 @@ Python training
 ==
 
 
-vv
+>>
 
 
 What is Python ?
 --
 
 * **Strongly typed**. You can't add or concat an integer and a string.
-* **Dynamically and implicity typed**. Data type are set at runtime².
+* **Dynamically and implicity typed**. Data type are set at runtime.
 * **Object oriented**. Everything is an object.
 * **Garbaged collected**.
 
@@ -24,11 +24,17 @@ vv
 
 History
 --
-> - v1.0 released late 1980 by **Guido Van Rossum**
-> - v2.0 released in Oct 2000, eol set to 2020
-> - v3.0 released in Dec 2008, not backward compatible 
+- v1.0 released late 1980 by **Guido Van Rossum**
+- v2.0 released in Oct 2000, end of life set to 2020
+- v3.0 released in Dec 2008, not backward compatible 
 
-### Guido Van Rossum
+
+vv
+
+
+Guido Van Rossum
+--
+
 Benevolent Dictator for Life (BDFL)
 
 - Open source
@@ -38,7 +44,11 @@ Benevolent Dictator for Life (BDFL)
 Guido just announced his retreat as BDFL.
 
 
-vv
+>>
+
+
+Python
+==
 
 
 What for
@@ -79,7 +89,9 @@ Why not at Presto ?
 * Based on Cython (C-compiled)
 * You can compile your script to C-executable or dll
 
+
 >>
+
 
 Tendance
 ==
@@ -90,6 +102,7 @@ tyobe...
 
 
 >>
+
 
 Ready ?
 ==
@@ -1726,6 +1739,7 @@ https://github.com/phalt/swapi-python
 
 links
 ==
+<small>
 https://docs.python.org --
 https://realpython.com/ --
 https://legacy.python.org/dev/peps/pep-0008/ --
@@ -1742,3 +1756,11 @@ http://sametmax.com/ (NSFW!) --
 https://en.wikipedia.org/wiki/Python_(programming_language) --
 https://fr.wikipedia.org/wiki/Guido_van_Rossum --
 http://introtopython.org/classes.html --
+https://droub.site44.com/ --
+https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/ --
+https://treyhunner.com/ --
+https://www.tiobe.com/tiobe-index/python/ --
+https://www.tiobe.com/tiobe-index/ --
+
+https://github.com/hakimel/reveal.js --
+</small>
