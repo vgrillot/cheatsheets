@@ -8,15 +8,15 @@ vv
 What is Python ?
 --
 
-* _Strongly typed_. You can't add or concat an integer and a string.
-* _Dynamically and implicity typed_. Data type are set at runtime².
-* _Object oriented_. Everything is an object.
-* _Garbaged collected_.
+* **Strongly typed**. You can't add or concat an integer and a string.
+* **Dynamically and implicity typed**. Data type are set at runtime².
+* **Object oriented**. Everything is an object.
+* **Garbaged collected**.
 
 
-* _Batteries included_, come with comprehensive standard library
+* **Batteries included**, come with comprehensive standard library
 
-* _Open-source software_, by non profit software generation.
+* **Open-source software**, by non profit software generation.
 
 
 vv
@@ -153,20 +153,20 @@ vv
 
 ### Conversions
 ```
->>>hex(42)
-'0x2a'
+hex(42)
+>>>'0x2a'
 
->>>bin(42)
-'0b101010'
+bin(42)
+>>>'0b101010'
  
->>>int('0xff')  # nop!
-ValueError: invalid literal for int() with base 10: '0xff'
+int('0xff')  # nop!
+>>>ValueError: invalid literal for int() with base 10: '0xff'
 
->>>int("0xff", 16)
-255
+int("0xff", 16)
+>>>255
 
->>>int("42", 8) 
-34
+int("42", 8) 
+>>>34
 ```
 
 
