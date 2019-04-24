@@ -210,7 +210,13 @@ s = "multi\nline"
 s = 'if you don\'t like it you can escape!'
 ```
 
-### More strings...
+
+vv
+
+
+More strings...
+--
+
 Specialized string
 ```
 >>> raw = r"this is NOT a multi \n line string"		    # raw string
