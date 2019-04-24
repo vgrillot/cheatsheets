@@ -1,8 +1,7 @@
 Python training
 ==
 
-
-
+vv
 
 Python  ?
 ==
@@ -35,6 +34,7 @@ Benevolent Dictator for Life (BDFL)
 
 Guido just announced his retreat as BDFL.
 
+vv
 
 What for
 --
@@ -62,6 +62,8 @@ Why not at Presto ?
 * Based on Cython (C-compiled)
 * You can compile your script to C-executable or dll
 
+>>
+
 Tendance
 ==
 pics...
@@ -70,15 +72,19 @@ tyobe...
 
 
 
+>>
 
 Ready ?
 ==
+
+vv
 
 Interactive Shell
 --
 
 ``python`` with *no argument* is a **console** ...
 
+vv
 
 Code sample
 --
@@ -98,7 +104,7 @@ no "{ }" either
 
 
 
-
+vv
 
 Numbers
 ==
