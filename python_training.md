@@ -1,4 +1,4 @@
-Python introduction
+Intro
 ==
 
 ![](img/python-logo-master-v3-TM.png)
