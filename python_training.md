@@ -433,9 +433,9 @@ names = ['valerie', 'ben', 'brice', 'olivier', 'christelle']
 genres= ['f', 'm', 'm', 'm', 'm', 'f']
 ```
 
-* list all even element ?
-* highest element ?
-* list all women
+* list all even numbers ?
+* highest number ?
+* list all women ?
 
 
 vv
@@ -469,6 +469,7 @@ Dictionary {}
 Store pair of any types as key:value
 ```
 A key must be hashable
+
 empty_dict = {}  # or dict()
 my_dict = {'A': 1, 'B': 2, 'C': 3}
 other_dict = {
@@ -477,22 +478,24 @@ other_dict = {
       3.14: math.pi,
       4: [1, 2, 3]
     }
+```
 
+Update
+--
+```
 my_dict[A] 		# 1
 'B' in my_dict 	# Does the key exists ? True.
 3 in my_dict 		# You cannot check a value here.
 my_dict['D'] = 4	# Added a new pair.
 my_dict['B'] = 5	# Updated
-
-t = 3.14
-
 ```
 
 
 vv
 
 
-### Common tool
+Common tool
+--
 ```
 #  access
 value = my_dict.get(key, default=None)  # with a default value you'll get no KeyError
@@ -508,11 +511,11 @@ my_dict.items()  # list of tuple (key, value)
 vv
 
 
-### Dict comprehension
+Dict comprehension
+--
+similar to list comprehension, but with a pair:
 ```
-  #  similar to list comprehension, but with a pair:
   {k: v for k, v in my_dict.items() if ...} 
- # build a dict from lists:
 ```
 
 
@@ -529,16 +532,16 @@ vv
 
 SOLUCE
 --
->Using list comprehension:
->```
-> {e[0]:e[1] for e in zip(names, genres)}
->```
+Using list comprehension:
+```
+ {e[0]:e[1] for e in zip(names, genres)}
+```
 
 
->Better with constructor:
->```
-> people = dict(zip(names, genres))
->```
+Better with constructor, build a dict from lists:
+```
+ people = dict(zip(names, genres))
+```
 
 
 vv
