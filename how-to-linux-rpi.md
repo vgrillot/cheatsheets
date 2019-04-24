@@ -1,10 +1,36 @@
 HOW TO LINUX, rpi edition !
 ===================================
 
+https://www.raspberrypi.org/documentation/
+
+
+Raspbian setup
+==============
+Default user: pi:rasbperry
+
+Enable SSH:
+Touch a file "ssh" on boot partition
+https://www.raspberrypi.org/documentation/remote-access/ssh/
+
+
+Update all packages
+``sudo apt-get update``
+
+Install PIP
+``sudo apt-get install python3-pip``
+
+Install GIT
+``sudo apt-get install git``
+
+
+
+
 
 Kivy setup
 ==========
-_I'm using Kivy distribution fr mission-pinball framework._
+_I'm using Kivy distribution for mission-pinball framework._
+
+Default user : sysop:posys
 
 http://kivypie.mitako.eu/kivy-faq.html
 
@@ -45,6 +71,14 @@ Show config:
 
 Restart wifi:
 ``sudo ifdown wlan0 && sudo ifup wlan0``
+
+
+Display ip at start:
+``hostname -I | figlet``
+
+install figlet:
+``sudo apt-get install figlet``
+
 
 
 System
