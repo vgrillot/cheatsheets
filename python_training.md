@@ -1,8 +1,9 @@
-Python training
+Python introduction
 ==
 
+![](img/python-logo-master-v3-TM.png)
 
->>
+vv
 
 
 What is Python ?
@@ -53,10 +54,10 @@ Python
 
 What for
 --
-web
-sysadmin
-data analysis, statistics, maths
-scripting
+* web
+* sysadmin
+* data analysis, statistics, maths
+* scripting
 
 
 vv
@@ -93,19 +94,10 @@ Why not at Presto ?
 >>
 
 
-Tendance
-==
-pics...
-
-tyobe...
-
-
-
->>
-
-
 Ready ?
 ==
+
+![](img/shutupandcode.jpg)
 
 
 vv
@@ -1602,12 +1594,19 @@ class PrestoServices(Enum):
 ps = PrestoServices  # just an alias
 ```
 
+vv
+
+
 directly access a enum item
 ```
 print(ps.pe)
 print(ps.pe.name)
 print(ps.pe.value)
 ```
+
+
+vv
+
 
 get an enum item by its value
 ```
