@@ -844,10 +844,10 @@ Functions
 Standard arguments
 ```
 #  basic function:
+#  return statement is optionnal
 def my_func():
     <code>
-     
-
+    
 #  add some parameters
 def get_username(first_name, last_name):
     return first_name[0] + last_name    # will fail if no first_name!
@@ -1243,7 +1243,9 @@ Lazy
 
 
 It can looks like list comprehension, but it's not !
+```
 my_even_generator = (x for x in range(10) if not x % 2)
+```
 
 A generator is LAZY, computed one item at a time:
 - low memory usage
@@ -1253,7 +1255,7 @@ A generator is LAZY, computed one item at a time:
 vv
 
 
-EXO
+EXO (05-traffic_lights)
 --
 Build a traffic lights generator 
 ```
@@ -1289,8 +1291,9 @@ try:
     if <condition>:
         raise ValueError("Can't do that...")
 
-except:
+except ValueError as e:
     <catch exception>
+    raise   # re-raise the same exception
 
 finally:
     <always executed>
@@ -1307,41 +1310,6 @@ Main exceptions:
 * KeyError (dictionary access)
 * ValueError (numeric error, or type error, ...)
 * IOError (files)
-
-
->>
-
-
-Regex
-==
-> Do you regex ?
-```
-
-```
-
-
-vv
-
-
-Exo
---
-
-
-named regex explode, 
-
-see exo3-binning
-
-
-vv
-
-
-real code sample
---
-
-search in gateway
-part number decoding
-
-see delphi, search 
 
 
 >>
@@ -1522,6 +1490,52 @@ Real code sample
 --
 stdf output
 nxp input
+
+
+>>
+
+
+
+Regex
+==
+> Do you regex ?
+
+best and powerfull way to extract pattern from text
+
+
+vv
+
+
+Basics
+--
+TODO: regex101.com
+```
+
+```
+
+
+vv
+
+
+Exo
+--
+
+
+named regex explode, 
+
+see exo3-binning
+
+
+vv
+
+
+real code sample
+--
+
+search in gateway
+part number decoding
+
+see delphi, search 
 
 
 >>
