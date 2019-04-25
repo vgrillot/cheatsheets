@@ -1733,8 +1733,8 @@ vv
 Don't
 --
 
-### No you wont when:
-* keep it simple !
+> keep it simple !
+
 * no member, no inheritance : a package (file) is enough
 * most transformation script don't need it (extract, transform, load)
 
@@ -1906,10 +1906,10 @@ TODO
 
 DuctTyping
 ==
-TODO
-If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck.
 
-http://sametmax.com/quest-ce-que-le-duck-typing-et-a-quoi-ca-sert/
+> If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck.
+
+TODO : http://sametmax.com/quest-ce-que-le-duck-typing-et-a-quoi-ca-sert/
 
 
 >>
