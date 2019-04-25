@@ -132,10 +132,10 @@ no "{ }" either
 vv
 
 
-Syntax
+Space does matter !
 --
 
-> Space does matter !
+> Readability counts
 
 - don't use tab
 - only spaces indent with 4 spaces
@@ -143,10 +143,11 @@ Syntax
 
 vv
 
-Style
+
+Do it with style
 --
 
-> do it with style, see PEP-8
+> see PEP-8
 
 PEP : Python Extension Proposal
 
