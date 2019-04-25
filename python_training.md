@@ -232,6 +232,11 @@ Specialized string
 >>> ascii = b"plain ASCII literal chars"                
 ```
 
+vv
+
+bytes
+--
+
 byte-array (or bytes) are not string:
 ```
 >>> this_will_fail = b"Pas de français!"
@@ -892,6 +897,12 @@ def <lambda>(<params>):
     return <expression>
 ```
 
+
+vv
+
+### example
+
+
 Then,
 ```
 def first_letter(name):
@@ -902,7 +913,12 @@ is equivalent to
 lambda name: name[0] if name else '-'
 ```
 
-and you can assign it, or use it directly:
+
+vv
+
+### usage
+
+and you can store it, or use it directly:
 
 ```
 >>> f = lambda name: name[0] if name else '-'
@@ -914,7 +930,10 @@ S
 -
 ```
 
-### usage
+vvv
+
+use case
+--
 lambda are used for transformation, sorting, ...
 
 
@@ -983,7 +1002,10 @@ Unpacking data
 
 automatic unpacking:
 ```
-it_guys = ["olivier", "david", "ahmed", "louis", "aurelien"]    # famous team :)
+# declare famous team :)
+it_guys = ["olivier", "david", "ahmed", "louis", "aurelien"]
+
+# and explode it:    
 o, d, a, l, r = it_guys    # auto unpacked
 ```
 
@@ -991,9 +1013,15 @@ o, d, a, l, r = it_guys    # auto unpacked
 use splat operator (*) to specify how to unpack list:
 
 ```
-manager, *peons = it_guys  # use splat operator
-manager, *others, missing = it_guys  # works also in the middle...
+# use splat operator to get the head:
+manager, *peons = it_guys  
+
+# works also in the man in the middle...
+manager, *others, missing = it_guys  
 ```
+
+
+vv
 
 
 EXO
