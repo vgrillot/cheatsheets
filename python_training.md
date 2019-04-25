@@ -369,7 +369,7 @@ Answers
 >>> l[:5]   # [4, 8, 15, 16, 23]
 >>> l[4:4]  # [] 
 >>> l[::2]  # [4, 15, 23]
->>> l[::-1} # [42, 23, 16, 15, 8, 4]
+>>> l[::-1] # [42, 23, 16, 15, 8, 4]
 ```
 
 
@@ -388,7 +388,7 @@ my_list.insert(i, elem)
 consuming
 ```
 i = my_list.index(elem)
-elem = my_list.pop(i)   # .pop() pop the last elem
+elem = my_list.pop(i)   # .pop() get the last elem
 my_list.remove(elem)
 ```
 
@@ -418,7 +418,16 @@ vv
 
 List comprehension
 --
-List comprehension is a dedicated syntax to return a new list
+Imagine you want to build a list from another list
+```
+under_10 =  []
+for n in numbers:
+    if n <= 10:
+        under_10.append(n)
+```
+
+
+List comprehension is a **pythonic** way to do it:
 ```
 under_10 = [ n for n in numbers if n <= 10 ]  
 ```
