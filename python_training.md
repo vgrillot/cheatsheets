@@ -1969,6 +1969,31 @@ def hello(name : str) -> str:
 One more thing
 ==
 
+![](img/one-more-thing-jobs.jpg)
+
+vv
+
+Plot
+--
+
+> see exo-plot
+
+```
+import matplotlib.pyplot as plt
+
+with open("pix.txt") as f:
+    line = f.readline()
+
+values = line.split(" ")
+
+plt.plot(values)
+plt.savefig("pix")
+```
+
+
+vv
+
+
 Logging
 --
 TODO
@@ -2019,6 +2044,24 @@ Application
 --
 Build a desktop application with WxPython
 https://wxpython.org/
+
+
+vv
+
+
+Web app
+--
+* Django
+* Flask
+
+
+>>
+
+
+Done !
+==
+
+![I'm done](img/imdone.jpg)
 
 
 >>
