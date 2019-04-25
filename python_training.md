@@ -955,14 +955,14 @@ EXO (03-lambda)
 --
 
 ```
-# TODO: get a list of 100 random integers  
+# get a list of 100 random integers  
 ...
 
-# TODO: use the filter() build-in function 
+# use the filter() build-in function 
 # and a lambda to keep only < 10 elements
 >>> help(filter) 
 
-# TODO: use the sorted() build-in function 
+# use the sorted() build-in function 
 # and a labmda to sort numbers by unit
 >>> help(sorted) 
 ```
@@ -1473,6 +1473,7 @@ Excel files
 > no build-in package for excel management
 
 but many packages are available on PyPi
+
 Ex: have a look to `panda package`
 
 
@@ -1550,17 +1551,9 @@ with open("results.bin", "rb") as f:
         print(f'{x}, {y} -> {b}')
 
 ```
-vv
-
-
-Real code sample
---
-stdf output
-nxp input
 
 
 >>
-
 
 
 Regular Expression
@@ -1575,34 +1568,28 @@ vv
 
 Basics
 --
+```
 TODO: regex101.com
 ```
 
+
+vv
+
+
+Exo (06-binning)
+--
+Decompose the following file
+```
+LOT-WAF    PRODID  PRODCOD YIELD
+---------  ------- ------- -------
+P61F76-6   AB008B  ABAAAB  98.57%
+P61F76-5   AB008B  ABAAAB  98.54%
+P61F76-14  AB008B  ABAAAB  98.00%
+P61F76-13  AB008B  ABAAAB  98.29%
 ```
 
 
 vv
-
-
-Exo
---
-
-
-named regex explode, 
-
-see exo3-binning
-
-
-vv
-
-
-real code sample
---
-
-search in gateway
-part number decoding
-
-see delphi, search 
 
 
 >>
@@ -1612,10 +1599,9 @@ Class
 ==
 finally we're talking OOP!
 
+![](img/objects_everywhere.jpg)
+
 > Everything is object...
-
-TODO: image "object everywhere"
-
 
 vv
 
@@ -1660,6 +1646,8 @@ vv
 
 class structure
 --
+
+> See exo-classes
 
 Let's create a simple PASS/FAIL die result
 ```
@@ -1875,12 +1863,11 @@ except:
 vv
 
 
-Exo
+Exo (07-struct)
 --
-TODO:
-See exo-struct,
- 
-improve binary file reader/writer.    
+Back to the previous exercise, 
+
+Improve binary file reader/writer using context manager.    
     
     
 >>
@@ -1889,6 +1876,9 @@ improve binary file reader/writer.
 Enum
 ==
 This is done by a class
+
+> See exo-enum
+
 ```
 from enum import Enum
 
@@ -1934,8 +1924,7 @@ Dataclass
 ==
 Need python >= 3.7
 
-https://realpython.com/python-data-classes/
-
+>  See exo-dataclasses
 
 ```
 import dataclasses
@@ -1966,81 +1955,70 @@ Typing
 
 Sometimes it can be usefull...
 
+Don't play _captain obvious_.
+
 ```
 def hello(name : str) -> str:
     return f"Hello {name}"
 ```
 
-https://docs.python.org/3/library/typing.html
-
 
 >>
 
 
-Logging
+One more thing
 ==
+
+Logging
+--
 TODO
 ```
 import logging
 ```
 
 
->>
+vv
 
 
 Unit tests
-==
+--
 TODO
 
 
->>
+vv
 
 
 Decorators
-==
+--
 TODO
 
 
->>
+vv
 
 
 DuctTyping
-==
+--
 
 > If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck.
 
 TODO : http://sametmax.com/quest-ce-que-le-duck-typing-et-a-quoi-ca-sert/
 
 
->>
+vv
 
 
 ArgParse
-==
+--
 TODO
 
 
->>
+vv
 
 
 Application
-==
+--
 Build a desktop application with WxPython
 https://wxpython.org/
-
-
->>
-
-
-funny stuff
-==
-
-star war api
---
-
-https://swapi.co/api/people/?format=api
-API to list all SW people 
-https://github.com/phalt/swapi-python
 
 
 >>
