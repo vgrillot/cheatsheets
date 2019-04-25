@@ -1033,7 +1033,8 @@ EXO (04-pizza)
 
 Anyone for a pizza ?
 ```
-#  here a standard function with named arguments and default values set to None.
+# here a standard function with named arguments 
+# and default values set to None.
 def make_pizza(elem1, elem2=None, elem3=None):
     print("Let's cook...")
     print(elem1)    # mandatory ingredient
@@ -1041,6 +1042,7 @@ def make_pizza(elem1, elem2=None, elem3=None):
     print(elem3)    # optionnal 2
 
 ingredients = ("cheeze", "tomatoes", "chorizo")
+
 make_pizza(ingredients)  
 >>> Let's cook...
 >>> ('cheeze', 'tomatoes', 'chorizo')
@@ -1166,7 +1168,7 @@ vv
 ### keyword args
 It's possible to specify keyword parameters only:
 ```
-def define_team(team_name, manager_name=None, *users, site_name, ):
+def define_team(team_name, manager_name=None, *users, site_name):
     # site_name is mandatory and should be call with a named position
     print(team_name)
     print(manager_name)
@@ -1215,8 +1217,12 @@ production_support_duty = cycle(["vince", "ben", "val", "brice"])
 
 Generator
 ==
-It looks like a function, but it's not !
+It looks like a function, it's defined like a function, 
+
+but it's not !
+
 ``yield`` keyword replace ``return``
+
 But you can continue to use return if you want to end the generator
 ```
 def my_odd_generator():
