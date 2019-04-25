@@ -1323,14 +1323,36 @@ Navigation
 
 ```
 import os
-filename = os.path.join("here", "we, "go.txt")  # will work windows AND unix
+# will work windows AND unix
+filename = os.path.join("here", "we, "go.txt")  
 os.listdir()
-os.rename(filename, "blah.txt") # TODO : check destination...
+os.rename(filename, "blah.txt") 
 os.mkdir(dirname)
 os.mkdirs(f'logs/{product}/{lot}/{probe}')
-
 ```
 
+
+vv
+
+File decomposition
+--
+
+```
+>>> import os
+>>> filename = os.path.join("here", "we", "go.txt")
+  
+>>> os.path.basename(filename)
+'go.txt'
+
+>>> os.path.dirname(filename)
+'here\\we'
+
+>>> os.path.split(filename)
+('here\\we', 'go.txt')
+
+>>> os.path.splitext(filename)
+('here\\we\\go', '.txt')
+```
 
 
 vv
