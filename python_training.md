@@ -1146,6 +1146,10 @@ def define_team(team_name, manager_name=None, *users, **kwargs):
     
 ```
 
+
+vv
+
+
 ### keyword args
 It's possible to specify keyword parameters only:
 ```
@@ -1156,8 +1160,11 @@ def define_team(team_name, manager_name=None, *users, site_name, ):
     print(users)
     print(site_name)
     
-define_team('IT', 'olivier', 'ahmed', 'david', site_name='MPH')  # good
-define_team('IT', 'olivier', 'ahmed', 'david', 'MPH')            # is an error  
+# good    
+define_team('IT', 'olivier', 'ahmed', 'david', site_name='MPH') 
+
+# is an error 
+define_team('IT', 'olivier', 'ahmed', 'david', 'MPH')             
 ```
 
 
@@ -1174,12 +1181,19 @@ from itertools import count, repeat, cycle, chain, islice
 
 ```
 production_support_duty = cycle(["vince", "ben", "val", "brice"])
-next(production_support_duty)
-next(production_support_duty)
-next(production_support_duty)
-next(production_support_duty)
-next(production_support_duty)
-next(production_support_duty)
+>>> next(production_support_duty)
+'vince"
+>>> next(production_support_duty)
+'ben'
+>>> next(production_support_duty)
+'val'
+>>> next(production_support_duty)
+'brice'
+>>> next(production_support_duty)
+'vince"
+>>> next(production_support_duty)
+'ben'
+... and so on...
 ```
 
 
@@ -1196,7 +1210,8 @@ def my_odd_generator():
     value = 1
     while True:
         yield value
-        #  the generator execution will continue from HERE on next call !
+        #  the generator execution will continue 
+        #  from HERE on next call !
         value += 2
 ```
 
@@ -1247,6 +1262,7 @@ def traffic_light():
 Exceptions
 ==
 > fail first !
+
 ```
 try:
     <do some code>
