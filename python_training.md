@@ -1016,7 +1016,7 @@ use splat operator (*) to specify how to unpack list:
 # use splat operator to get the head:
 manager, *peons = it_guys  
 
-# works also in the man in the middle...
+# works also at other position:
 manager, *others, missing = it_guys  
 ```
 
@@ -1044,6 +1044,12 @@ make_pizza(ingredients)
 >>> None
 ```
 
+
+vv
+
+### Unpack!
+
+
 We need to unpack ingredients first:
 ```
 make_pizza(*ingredients)    # need to force unpacking
@@ -1068,7 +1074,10 @@ def list_ingredients(*ingredients):
 list_ingredients(*ingredients)
 >>> + cheeze
 >>> + tomatoes
->>> + chorizo        
+>>> + chorizo      
+
+# any number of arguments! 
+list_ingredients("cheeze", "cream", "potatoes")  
 ```
 
 
@@ -1101,7 +1110,7 @@ SOLUCE
 ```
 def make_pizza(base_item, *optionnal_items):
     print("let's cook")
-    print(f"first add base_item")
+    print(f"first add {base_item}")
     for item in optionnal_items:
         print(f", add some {item}")
         
@@ -1117,14 +1126,18 @@ make_pizza("tomate", "ananas", "banana", "chocolate")
 functions
 ==
 
-complete function definition
+it's possible to combine all kind of arguments, 
 
-it's possible to combine all kind of arguments, but the order is mandatory
+but the order is mandatory
 * mandatory arguments (arg)
 * optionnal arguments (arg=default)
 * dynamic arguments (*args)
 * named dynamic arguments (**kwargs)
 
+
+vv
+
+### mixed argments function
 ```
 def define_team(team_name, manager_name=None, *users, **kwargs):
     pass
@@ -1133,6 +1146,7 @@ def define_team(team_name, manager_name=None, *users, **kwargs):
     
 ```
 
+### keyword args
 It's possible to specify keyword parameters only:
 ```
 def define_team(team_name, manager_name=None, *users, site_name, ):
