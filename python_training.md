@@ -869,14 +869,18 @@ Argument with default value are optionals
 
 vv
 
-Lambda, aka anonymous functions
+Anonymous functions
 --
-As Voldemort, you can't name it...
+A lambda is a function without name
 
 ### Restriction in Python
-Keep it simple:
+> Keep it simple:
 - only one line
 - only one instruction
+
+
+vv
+
 
 ### syntax
 ```
@@ -924,10 +928,12 @@ EXO
 # TODO: get a list of 100 random integers  
 ...
 
-# TODO: use the filter build-in function and a lambda to keep only < 10 elements
+# TODO: use the filter() build-in function 
+# and a lambda to keep only < 10 elements
 >>> help(filter) 
 
-# TODO: use the sorted build-in function and a labmda to sort numbers by unit
+# TODO: use the sorted() build-in function 
+# and a labmda to sort numbers by unit
 >>> help(sorted) 
 ```
  
@@ -941,10 +947,10 @@ SOLUCE
 # get a list of random integers  
 >>> a = [random.randint(1, 100) for n in range(100)]
 
-# use the filter build-in function and a lambd to keep only < 10 elements
+# usage of filter():
 >>> list(filter(lambda v:v < 10, v))
 
-# use the sorted build-in function and a labmda to sort numbers by unit
+# usage of sorted():
 sorted(a, key=lambda v:v % 10)
 ```
 
@@ -967,6 +973,10 @@ Splat operator * **
 *           # splat operator
 **          # splatty-splat operator
 ```
+
+
+vv
+
 
 Unpacking data
 --
@@ -1080,11 +1090,13 @@ functions
 ==
 
 complete function definition
+
 it's possible to combine all kind of arguments, but the order is mandatory
 * mandatory arguments (arg)
 * optionnal arguments (arg=default)
 * dynamic arguments (*args)
 * named dynamic arguments (**kwargs)
+
 ```
 def define_team(team_name, manager_name=None, *users, **kwargs):
     pass
@@ -1103,9 +1115,7 @@ def define_team(team_name, manager_name=None, *users, site_name, ):
     print(site_name)
     
 define_team('IT', 'olivier', 'ahmed', 'david', site_name='MPH')  # good
-define_team('IT', 'olivier', 'ahmed', 'david', 'MPH')            # is an error
-
-   
+define_team('IT', 'olivier', 'ahmed', 'david', 'MPH')            # is an error  
 ```
 
 
@@ -1149,6 +1159,13 @@ def my_odd_generator():
 ```
 
 
+vv
+
+
+Lazy
+--
+
+
 It can looks like list comprehension, but it's not !
 my_even_generator = (x for x in range(10) if not x % 2)
 
@@ -1162,7 +1179,10 @@ vv
 
 EXO
 --
-Build a traffic lights generator green->orange->red->...
+Build a traffic lights generator 
+```
+green->orange->red->...
+```
 
 
 vv
@@ -1199,7 +1219,13 @@ finally:
     <always executed>
 ```
 
+
+vv
+
+
 Main exceptions:
+--
+
 * IndexError (list access)
 * KeyError (dictionary access)
 * ValueError (numeric error, or type error, ...)
@@ -1260,7 +1286,6 @@ os.mkdirs(f'logs/{product}/{lot}/{probe}')
 
 ```
 
-https://realpython.com/working-with-files-in-python/
 
 
 vv
@@ -1302,14 +1327,14 @@ Text files
 --
 ``obj = open(filename, mode)``
 
-> not very good:
+not very good:
 ```
 f = open(filename, 'r')
 f.readline()
 close(f)
 ```
 
-> at least it's safe:
+at least it's safe:
 ```
 f = open(filename, 'r')
 try:
@@ -1318,7 +1343,10 @@ finally:
     close(f)
 ```
 
-> pythonic: using context manager (with):
+vv
+
+
+**pythonic**: using context manager (with):
 ```
 with open(filename, 'r') as file:
     for line in file:
@@ -1332,8 +1360,6 @@ vv
 Common
 --
 
-https://www.pythonforbeginners.com/cheatsheet/python-file-handling
-https://realpython.com/working-with-files-in-python/
 
 ```
 file.write()
@@ -1387,8 +1413,7 @@ Binaries files
 https://gto76.github.io/python-cheatsheet/#struct
 
 Struct
-Module that performs conversions between Python values and a C struct, represented as a Python bytes object.
-Machine’s native type sizes and byte order are used by default.
+Module that performs conversions between Python values and a C struct.
 ```
 from struct import pack, unpack, iter_unpack, calcsize
 <bytes>  = pack('<format>', <value_1> [, <value_2>, ...])
@@ -1412,6 +1437,10 @@ Exo
 
 TODO:exo-struct
 
+
+vv
+
+
 Real code sample
 --
 stdf output
@@ -1426,6 +1455,12 @@ Class
 finally we're talking OOP!
 
 > Everything is object...
+
+TODO: image "object everywhere"
+
+
+vv
+
 
 Introspection
 --
@@ -1491,15 +1526,23 @@ Now we want to extend it to have its position on a wafer:
 class WaferDieResult(DieResult):
     """ extended container to have the wafer position """
     def __init__(self, x, y, good):
-        """ here the extended constructor"""
-        #  call the inherited constructor first
+        """ here the inherited constructor"""
+        #  call the parent constructor first
         super().__init__(good)
         #  add new members
         self.x = x
         self.y = y
         
-        
-#  Usage:
+```
+
+
+vv
+
+
+Usage
+--
+
+```
 >>> die = WaferDieResult(30, 40, True)  # another good die
 >>> die.x
 30
@@ -1511,11 +1554,15 @@ True
 vv
 
 
+Print an object
+--
+
 ```
 >>> die
 <__main__.WaferDieResult object at 0x0000023F2BFB4080>       
 ```
 not very friendly...
+
 lets improve the string representation.
 
 ```
@@ -1537,7 +1584,7 @@ vv
 dunder method
 --
 dunder stands for double-underscore,
-all dunder methods are python internals and standard method,
+all dunder methods are python internals and standard methods,
 you can override it when needed
 ```
     def __init__(self, x, y, good):
@@ -1581,6 +1628,13 @@ private and protected convention
 
 Everything is public, but there is convention to avoid naming collision:
 
+
+vv
+
+
+Example
+--
+
 ```
 class Person(object):
     def __init__(self, name):
@@ -1603,22 +1657,29 @@ class Person(object):
 vv
 
 
-Don't do a class for everything...
+Do
 --
 
-> ### Just do it when:
-> if you have members
-> if you need inheritance
-> if you need to override a behavior
-> context manager (see next slide)
+> Don't do a class for everything...
 
-> ### No you wont when:
-> keep it simple !
-> no member, no inheritance : a package (file) is enough
-> most transformation script don't need it (extract, transform, load)
+### Just do it when:
+* if you have members
+* if you need inheritance
+* if you need to override a behavior
+* context manager (see next slide)
 
 
-http://introtopython.org/classes.html
+vv
+
+
+Don't
+--
+
+### No you wont when:
+* keep it simple !
+* no member, no inheritance : a package (file) is enough
+* most transformation script don't need it (extract, transform, load)
+
 
 
 >>
@@ -1627,13 +1688,20 @@ http://introtopython.org/classes.html
 Context Manager
 ==
 A context manager is an object which can be used to simplify tidy up of object.
+
 It's used with `with` keyword
+
+vv
+
+`with` Usage
+--
+
 ```
 with MyContextManager as cm:
     ... # do your code here
 ``` 
 
-and is similar to
+is similar to
     
 ```
 cm = MyContextManager()
@@ -1651,6 +1719,7 @@ vv
 
 Exo
 --
+TODO:
 See exo-struct,
  
 improve binary file reader/writer.    
@@ -1733,17 +1802,18 @@ qt1234 = Lot("QT1234", "AB001", "ABACAD", [1,2,3,4,5])
 
 Typing
 ==
+(python > 3.5)
+
 > You're missing some type information ?
 
 Sometimes it can be usefull...
-(python > 3.5)
 
-https://docs.python.org/3/library/typing.html
 ```
 def hello(name : str) -> str:
     return f"Hello {name}"
-
 ```
+
+https://docs.python.org/3/library/typing.html
 
 
 >>
@@ -1840,8 +1910,12 @@ http://introtopython.org/classes.html --
 https://droub.site44.com/ --
 https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/ --
 https://treyhunner.com/ --
+https://www.pythonforbeginners.com/cheatsheet/python-file-handling -- 
+
+
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
 
 https://github.com/hakimel/reveal.js --
+
 </small>
