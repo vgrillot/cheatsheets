@@ -129,6 +129,32 @@ no "{ }" either
 > readability count
 
 
+vv
+
+
+Syntax
+--
+
+> Space does matter !
+
+- don't use tab
+- only spaces indent with 4 spaces
+
+
+vv
+
+Style
+--
+
+> do it with style, see PEP-8
+
+PEP : Python Extension Proposal
+
+Share the same way if programming.
+
+> See also Zen of Python.
+
+
 >>
 
 
@@ -2090,7 +2116,7 @@ https://droub.site44.com/ --
 https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/ --
 https://treyhunner.com/ --
 https://www.pythonforbeginners.com/cheatsheet/python-file-handling -- 
-
+http://media.jehaisleprintemps.net/talks/pep8-talk/ --
 
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
