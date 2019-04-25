@@ -436,13 +436,12 @@ under_10 = [ n for n in numbers if n <= 10 ]
 vv
 
 
-Exo
+Exo (01-list)
 --
 
 initial conditions
 ```
 numbers = [8, 4, 16, 42, 23, 15]
-letters = ['a', 'b', 'c', 'd', 'e']
 names = ['valerie', 'ben', 'brice', 'olivier', 'christelle']
 genres= ['f', 'm', 'm', 'm', 'm', 'f']
 ```
@@ -540,9 +539,11 @@ similar to list comprehension, but with a pair:
 vv
 
 
-EXO
+EXO (02-dict)
 --
-Build a dict from previous both list names and genres 
+From previous both list names and genres,
+
+build a dict with key as name and genre as value.  
 
 
 vv
@@ -565,7 +566,7 @@ Better with constructor, build a dict from lists:
 vv
 
 
-EXO
+EXO (02-dict)
 --
 Return all men from the previous results
 
@@ -589,7 +590,6 @@ More tools
 >>> from collections import Counter
 >>> Counter(genre)
 {'f': 2, 'm': 4}
-
 ```
 
 
@@ -794,10 +794,6 @@ best:
 >>> ["yes" if n else "no" for n in numbers]
 ```
 
-```
->>> [n and "yes" or "no" for n in numbers]
-```
-
 
 >>
 
@@ -828,6 +824,7 @@ vv
 
 ```
 all_rings = ['narya', 'nenya', 'vivya', 'sauron']
+
 for ring in all_rings:
     if ring == "sauron":
         print("my precious...")
@@ -876,6 +873,7 @@ Argument with default value are optionals
 ```
 >>> get_email("tom", "jones")
 't.jones@presto-eng.com'
+
 >>> get_email("darth", "vader", domain="empire.com")   
 'd.vader@empire.com'
 ```
@@ -889,6 +887,7 @@ A lambda is a function without name
 
 ### Restriction in Python
 > Keep it simple:
+
 - only one line
 - only one instruction
 
@@ -902,7 +901,7 @@ lambda <params> : <expression>
 ```
 it would be equivalent to this function:
 ```
-def <lambda>(<params>):
+def lambda(<params>):
     return <expression>
 ```
 
@@ -931,15 +930,18 @@ and you can store it, or use it directly:
 
 ```
 >>> f = lambda name: name[0] if name else '-'
+
 >>> f("Scarlett")
 S
+
 >>> f("")
 -
+
 >>>f(None)
 -
 ```
 
-vvv
+vv
 
 use case
 --
@@ -949,7 +951,7 @@ lambda are used for transformation, sorting, ...
 vv
 
 
-EXO
+EXO (03-lambda)
 --
 
 ```
@@ -973,22 +975,14 @@ SOLUCE
 --
 ```
 # get a list of random integers  
->>> a = [random.randint(1, 100) for n in range(100)]
+>>> numbers = [random.randint(1, 100) for n in range(100)]
 
 # usage of filter():
->>> list(filter(lambda v:v < 10, v))
+>>> list(filter(lambda n: n < 10, numbers))
 
 # usage of sorted():
 sorted(a, key=lambda v:v % 10)
 ```
-
-
-vv
-
-
-Partial functions
---
-TODO
 
 
 >>
@@ -1012,10 +1006,10 @@ Unpacking data
 automatic unpacking:
 ```
 # declare famous team :)
-it_guys = ["olivier", "david", "ahmed", "louis", "aurelien"]
+it_guys = ["olivier", "david", "iahmed", "louis"]
 
 # and explode it:    
-o, d, a, l, r = it_guys    # auto unpacked
+o, d, i, l = it_guys    # auto unpacked
 ```
 
 
@@ -1026,14 +1020,15 @@ use splat operator (*) to specify how to unpack list:
 manager, *peons = it_guys  
 
 # works also at other position:
-manager, *others, missing = it_guys  
+# ex : find the men in the middle
+manager, *others, trainee = it_guys  
 ```
 
 
 vv
 
 
-EXO
+EXO (04-pizza)
 --
 
 Anyone for a pizza ?
@@ -1093,20 +1088,7 @@ list_ingredients("cheeze", "cream", "potatoes")
 vv
 
 
-### using dictionary and splatty-splat operator
-```
-#  reuse previous get_email() function
-
-luke = {"first_name": "luke", "last_name" : "skywalker"}
-get_email(**luke, domain="rebels.org")   
->>> 'l.skywalker@rebels.org'
-```
-
-
-vv
-
-
-EXO:
+EXO (04-pizza):
 --
 please improve make_pizza function to allow any optional ingredients
 
@@ -1127,6 +1109,28 @@ make_pizza(*ingredients)
 
 # list are no more mandatory:  
 make_pizza("tomate", "ananas", "banana", "chocolate")      
+```
+
+
+vv
+
+
+### using dictionary and splatty-splat operator
+```
+#  reuse previous get_email() function
+def get_email(first_name, last_name, domain="presto-eng.com"):
+    return f"{first_name[0]}.{last_name}@{domain}"
+
+
+luke = {"first_name": "luke", "last_name" : "skywalker"}
+
+get_email(**luke, domain="rebels.org")   
+
+>>> 'l.skywalker@rebels.org'
+```
+is similar to
+```
+get_email(first_name="luke", last_name="skywalker", domain="rebels.org")   
 ```
 
 
