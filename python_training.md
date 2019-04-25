@@ -1286,17 +1286,18 @@ Exceptions
 
 ```
 try:
-    <do some code>
+    # <do some code>
     
-    if <condition>:
+    if condition:
         raise ValueError("Can't do that...")
 
 except ValueError as e:
-    <catch exception>
+    # manage exception
     raise   # re-raise the same exception
 
 finally:
-    <always executed>
+    # <always executed>
+    pass
 ```
 
 
@@ -1340,6 +1341,7 @@ File decomposition
 ```
 >>> import os
 >>> filename = os.path.join("here", "we", "go.txt")
+'here\\we\\go.txt'
   
 >>> os.path.basename(filename)
 'go.txt'
@@ -1378,6 +1380,7 @@ import shutil
 shutil.rmtree(dirname)
 shutil.mkdirs() # TODO:check ?
 ```
+
 
 ```
 import glob
@@ -1467,9 +1470,10 @@ vv
 Excel files
 --
 
-http://sametmax.com/lire-et-ecrire-dans-un-fichier-xls/
+> no build-in package for excel management
 
-or you can also use `panda package`
+but many packages are available on PyPi
+Ex: have a look to `panda package`
 
 
 vv
@@ -1486,11 +1490,14 @@ from struct import pack, unpack, iter_unpack, calcsize
 <bytes>  = pack('<format>', <value_1> [, <value_2>, ...])
 <tuple>  = unpack('<format>', <bytes>)
 <tuples> = iter_unpack('<format>', <bytes>)
+
 Example
 >>> pack('>hhl', 1, 2, 3)
 b'\x00\x01\x00\x02\x00\x00\x00\x03'
+
 >>> unpack('>hhl', b'\x00\x01\x00\x02\x00\x00\x00\x03')
 (1, 2, 3)
+
 >>> calcsize('>hhl')
 8
 ```
@@ -1499,12 +1506,50 @@ b'\x00\x01\x00\x02\x00\x00\x00\x03'
 vv
 
 
-Exo
+EXO (07-struct)
 --
 
-TODO:exo-struct
+```
+#
+#   file structure:
+#
+#   lot_number  : string[20]
+#   die_count   : unsigned word
+#   dies:
+#   x           : unsigned word
+#   y           : unsigned word
+#   bin         : unsigned byte
+#
+```
+
+Build a reader and a writer for this file using struct package.
 
 
+vv
+
+
+SOLUCE
+--
+
+```
+
+#  READER
+with open("results.bin", "rb") as f:
+    data = f.read(20)
+    lot_name = unpack('20s', data)
+    lot_name = lot_name[0].decode('ascii')
+    print(f"lot={lot_name}")
+
+    data = f.read(2)
+    die_count = unpack('H', data)[0]
+    print(f"dies={die_count}")
+
+    for i in range(0, die_count):
+        data = f.read(5)
+        x, y, b = unpack('HHB', data)
+        print(f'{x}, {y} -> {b}')
+
+```
 vv
 
 
@@ -1518,7 +1563,7 @@ nxp input
 
 
 
-Regex
+Regular Expression
 ==
 > Do you regex ?
 
