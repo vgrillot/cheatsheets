@@ -510,14 +510,18 @@ Store pair of any types as key:value
 ```
 A key must be hashable
 
-empty_dict = {}  # or dict()
-my_dict = {'A': 1, 'B': 2, 'C': 3}
-other_dict = {
+>>> empty_dict = {}  # or dict()
+>>> my_dict = {'A': 1, 'B': 2, 'C': 3}
+>>> other_dict = {
       'one': 1,
       2: 'two',
       3.14: math.pi,
       4: [1, 2, 3]
     }
+
+>>> other_dict['one']
+1
+    
 ```
 
 
@@ -2084,6 +2088,23 @@ Web app
 
 >>
 
+
+Train yourself
+==
+#### www.codingame.com
+![codingame](img/codingame-get-better-at-coding.jpg)
+
+
+>>
+
+
+Almost done !
+==
+```
+>>> import antigravity
+```
+did you learn to fly ?
+ 
 
 Done !
 ==
