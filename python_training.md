@@ -2004,8 +2004,26 @@ One more thing
 
 vv
 
+Statistics
+--
+
+### Numpy  
+
+- numerical computation
+- matrix
+
+### Pandas
+
+- data structure
+- statistics
+- time series
+
+
+
 Plot
 --
+
+### matplotlib
 
 > see exo-plot
 
@@ -2020,6 +2038,8 @@ values = line.split(" ")
 plt.plot(values)
 plt.savefig("pix")
 ```
+
+> easy to use with pandas
 
 
 vv
@@ -2098,7 +2118,7 @@ Code & play
 >>
 
 
-Almost done !
+Almost...!
 ==
 ```
 >>> import antigravity
@@ -2109,7 +2129,7 @@ did you learn to fly ?
 vv
 
 
-Done !
+...Done !
 ==
 
 ![I'm done](img/imdone.jpg)
