@@ -2089,7 +2089,7 @@ Web app
 >>
 
 
-Train yourself
+Code & play
 ==
 #### www.codingame.com
 ![codingame](img/codingame-get-better-at-coding.jpg)
@@ -2105,6 +2105,9 @@ Almost done !
 ```
 did you learn to fly ?
  
+
+vv
+
 
 Done !
 ==
