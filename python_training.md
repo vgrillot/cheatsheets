@@ -65,7 +65,8 @@ vv
 
 Who ?
 --
-* Youtube, ...
+* Youtube, NetFlix,
+* Microsoft, 
 * Games...
 * GFX...
 * Redhat...
@@ -2165,6 +2166,8 @@ https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/ --
 https://treyhunner.com/ --
 https://www.pythonforbeginners.com/cheatsheet/python-file-handling -- 
 http://media.jehaisleprintemps.net/talks/pep8-talk/ --
+https://devblogs.microsoft.com/python/python-in-visual-studio-code-april-2019-release/ --
+https://medium.com/netflix-techblog/python-at-netflix-bba45dae649e --
 
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
