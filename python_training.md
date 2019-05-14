@@ -65,7 +65,8 @@ vv
 
 Who ?
 --
-* Youtube, ...
+* Youtube, NetFlix,
+* Microsoft, 
 * Games...
 * GFX...
 * Redhat...
@@ -1237,6 +1238,8 @@ production_support_duty = cycle(["vince", "ben", "val", "brice"])
 'brice'
 >>> next(production_support_duty)
 'vince"
+>>> next(production_support_duty)
+'ben'
 ... and so on...
 ```
 
@@ -1680,7 +1683,6 @@ P61F76-5   AB008B  ABAAAB  98.54%
 P61F76-14  AB008B  ABAAAB  98.00%
 P61F76-13  AB008B  ABAAAB  98.29%
 ```
-
 
 
 vv
@@ -2229,6 +2231,8 @@ https://treyhunner.com/ --
 https://www.pythonforbeginners.com/cheatsheet/python-file-handling -- 
 http://media.jehaisleprintemps.net/talks/pep8-talk/ --
 https://github.com/upalr/Python-camp --
+https://devblogs.microsoft.com/python/python-in-visual-studio-code-april-2019-release/ --
+https://medium.com/netflix-techblog/python-at-netflix-bba45dae649e --
 
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
