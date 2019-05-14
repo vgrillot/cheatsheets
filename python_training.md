@@ -1402,14 +1402,16 @@ Assertions
 Particular test which should be ALWAYS true
 
 _Use it as much as you can_
-- for structure and mandatory fields
-- NOT for functional condition
+- for mandatory conditions, objects, fields, ... 
+- NOT for functional conditions
 
 ```
 assert <condition>
 ```
 
-assert are for developers, and can be ignored in produciton mode !
+assert are for developers, 
+
+and can be ignored in production mode !
 
 >>
 
