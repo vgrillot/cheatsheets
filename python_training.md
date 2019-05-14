@@ -1385,7 +1385,7 @@ finally:
 vv
 
 
-Main exceptions:
+Main exceptions
 --
 
 * IndexError (list access)
@@ -1393,6 +1393,23 @@ Main exceptions:
 * ValueError (numeric error, or type error, ...)
 * IOError (files)
 
+
+vv
+
+
+Assertions
+==
+Particular test which should be ALWAYS true
+
+_Use it as much as you can_
+- for structure and mandatory fields
+- NOT for functional condition
+
+```
+assert <condition>
+```
+
+assert are for developers, and can be ignored in produciton mode !
 
 >>
 
