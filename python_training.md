@@ -1603,8 +1603,18 @@ from struct import pack, unpack, iter_unpack, calcsize
 <bytes>  = pack('<format>', <value_1> [, <value_2>, ...])
 <tuple>  = unpack('<format>', <bytes>)
 <tuples> = iter_unpack('<format>', <bytes>)
+# b : byte (1)
+# h : short (2)
+# s : string (1 char)
+# ...
+```
 
-Example
+vv
+
+Struct example
+--
+
+```
 >>> pack('>hhl', 1, 2, 3)
 b'\x00\x01\x00\x02\x00\x00\x00\x03'
 
