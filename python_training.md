@@ -1038,10 +1038,10 @@ Unpacking data
 automatic unpacking:
 ```
 # declare famous team :)
-it_guys = ["olivier", "david", "iahmed", "louis"]
+it_guys = ["olivier", "david", "ahmed", "louis"]
 
 # and explode it:    
-o, d, i, l = it_guys    # auto unpacked
+o, d, a, l = it_guys    # auto unpacked
 ```
 
 
@@ -1076,11 +1076,24 @@ def make_pizza(elem1, elem2=None, elem3=None):
 ingredients = ("cheeze", "tomatoes", "chorizo")
 
 make_pizza(ingredients)  
+```
+
+Any idea of printed results ?
+
+
+vv
+
+
+Unexpected results.
+```
+make_pizza(ingredients)  
 >>> Let's cook...
 >>> ('cheeze', 'tomatoes', 'chorizo')
 >>> None
 >>> None
 ```
+
+Any idea?
 
 
 vv
@@ -1643,11 +1656,11 @@ Basics
 "*" : repeater, 0 to many
 "+" : repeater, 0 to many
 "?" : repeater, 0 or 1
-"{n} : repeater, n time exact
-"{n, m} : repeater, n to m 
+"{n}" : repeater, n time exact
+"{n, m}" : repeater, n to m 
 
 ```
-regex101.com
+https://regex101.com
 
 
 vv
