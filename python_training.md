@@ -1137,7 +1137,9 @@ vv
 
 EXO (04-pizza):
 --
-please improve make_pizza function to allow any optional ingredients
+please improve make_pizza function to allow
+- one mandatory ingredient 
+- any optional ingredients
 
 
 vv
@@ -1339,6 +1341,20 @@ def traffic_light():
         yield "green"
         yield "orange"
         yield "red"
+```
+
+
+vv
+
+Better
+--
+
+```
+from itertools import cycle
+
+def better_traffic_lights():
+    #  you can build a generator from another generator or iterator (here : cycle)
+    yield from cycle(["green", "orange", "red"])
 ```
 
 
