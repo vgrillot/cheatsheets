@@ -1237,10 +1237,20 @@ production_support_duty = cycle(["vince", "ben", "val", "brice"])
 'brice'
 >>> next(production_support_duty)
 'vince"
->>> next(production_support_duty)
-'ben'
 ... and so on...
 ```
+
+
+vv
+
+
+Iterable vs Iterator
+--
+`Iterable` is a container object which will be iterated
+
+`Iterator` is a tool object which will iterate an iterable 
+
+<small>even if this is not totally exact</small>
 
 
 >>
@@ -1255,6 +1265,14 @@ but it's not !
 ``yield`` keyword replace ``return``
 
 But you can continue to use return if you want to end the generator
+
+
+vv
+
+
+Generator sample:
+--
+
 ```
 def my_odd_generator():
     value = 1
@@ -1413,12 +1431,24 @@ shutil.mkdirs() # TODO:check ?
 ```
 
 
+vv
+
+recursive search
+--
+
+```
+import glob
+for file in glob.glob('*/*/*.csv', recursive=True):   # recursive
+    print(file)
+```
+`*/*` will enter 2 (and only 2) subdir
+
 ```
 import glob
 for file in glob.glob('**/*.csv', recursive=True):   # recursive
     print(file)
-
 ```
+`**` will look any level of subdir
 
 
 vv
@@ -1600,12 +1630,44 @@ vv
 Basics
 --
 ```
-TODO: regex101.com
+"TEST" : exact match
+"." : any char
+"[TES]" : any of those char list
+"[A-Z]" : range, from A to Z
+"^" : start of string
+"$" : end of string
+
+"*" : repeater, 0 to many
+"+" : repeater, 0 to many
+"?" : repeater, 0 or 1
+"{n} : repeater, n time exact
+"{n, m} : repeater, n to m 
+
 ```
+regex101.com
 
 
 vv
 
+
+Exo (06-binning)
+--
+### Explanation
+
+re.match : from the beginning
+re.search : search in the whole string
+and many other...
+
+```
+LOT-WAF    PRODID  PRODCOD YIELD
+---------  ------- ------- -------
+P61F76-6   AB008B  ABAAAB  98.57%
+```
+
+```
+>>> re.search(r"[A-Z]{2}0[0-9]{2}[A-Z]", "P61F76-6   AB008B  ABAAAB  98.57%") 
+<_sre.SRE_Match object; span=(9, 14), match='AB008'>
+```
 
 Exo (06-binning)
 --
@@ -1618,6 +1680,7 @@ P61F76-5   AB008B  ABAAAB  98.54%
 P61F76-14  AB008B  ABAAAB  98.00%
 P61F76-13  AB008B  ABAAAB  98.29%
 ```
+
 
 
 vv
@@ -2165,6 +2228,7 @@ https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/ --
 https://treyhunner.com/ --
 https://www.pythonforbeginners.com/cheatsheet/python-file-handling -- 
 http://media.jehaisleprintemps.net/talks/pep8-talk/ --
+https://github.com/upalr/Python-camp --
 
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
