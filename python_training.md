@@ -1733,9 +1733,8 @@ https://regex101.com
 vv
 
 
-Exo (06-binning)
+Example
 --
-### Explanation
 
 re.match : from the beginning
 re.search : search in the whole string
@@ -1751,6 +1750,10 @@ P61F76-6   AB008B  ABAAAB  98.57%
 >>> re.search(r"[A-Z]{2}0[0-9]{2}[A-Z]", "P61F76-6   AB008B  ABAAAB  98.57%") 
 <_sre.SRE_Match object; span=(9, 14), match='AB008'>
 ```
+
+
+vv
+
 
 Exo (06-binning)
 --
