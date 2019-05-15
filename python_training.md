@@ -1236,12 +1236,11 @@ define_team('IT', 'olivier', 'ahmed', 'david', 'MPH')
 Iterator
 ==
 In python prefer use ``for`` than ``while``
+
 That's why there is many iterator tools:
 ```
 from itertools import count, repeat, cycle, chain, islice
-```
 
-```
 production_support_duty = cycle(["vince", "ben", "val", "brice"])
 >>> next(production_support_duty)
 'vince"
@@ -1253,8 +1252,6 @@ production_support_duty = cycle(["vince", "ben", "val", "brice"])
 'brice'
 >>> next(production_support_duty)
 'vince"
->>> next(production_support_duty)
-'ben'
 ... and so on...
 ```
 
@@ -1282,7 +1279,9 @@ but it's not !
 
 ``yield`` keyword replace ``return``
 
-But you can continue to use return if you want to end the generator
+But you can continue to use return 
+
+if you want to end the generator
 
 
 vv
@@ -1312,6 +1311,9 @@ Generator
 > Instead of returning a value, you __generate__ a series of values (using yield)
 
 > Best use with for statement
+
+
+vv
 
 
 Lazy
@@ -1422,6 +1424,19 @@ assert are for developers,
 
 and can be ignored in production mode !
 
+
+vv
+
+### beware of the always-true assertion:
+
+
+```
+assert(False, "you will pass here!!!")
+```
+
+you are testing a tuple, don't put parenthesis !!
+
+
 >>
 
 
@@ -1433,6 +1448,7 @@ Navigation
 
 ```
 import os
+
 # will work windows AND unix
 filename = os.path.join("here", "we, "go.txt")  
 os.listdir()
@@ -1520,8 +1536,11 @@ finally
 * glob : search
 * fnmatch : filtering
 
-
 * pathlib : aggregated to a Path class
+
+<small>
+I wish I had redo all sample with pathlib ;-)
+</small>
 
 
 vv
@@ -1538,7 +1557,7 @@ f.readline()
 close(f)
 ```
 
-at least it's safe:
+at least do it safe:
 ```
 f = open(filename, 'r')
 try:
@@ -1583,7 +1602,7 @@ Csv files
 Load CSV file
 ```
 import csv
-Read Rows from CSV File
+
 def read_csv_file(filename):
     with open(filename, encoding='utf-8') as file:
         return csv.reader(file, delimiter=';')
@@ -1616,7 +1635,6 @@ vv
 
 Binaries files
 --
-https://gto76.github.io/python-cheatsheet/#struct
 
 Struct
 Module that performs conversions between Python values and a C struct.
@@ -1625,11 +1643,12 @@ from struct import pack, unpack, iter_unpack, calcsize
 <bytes>  = pack('<format>', <value_1> [, <value_2>, ...])
 <tuple>  = unpack('<format>', <bytes>)
 <tuples> = iter_unpack('<format>', <bytes>)
-# b : byte (1)
-# h : short (2)
-# s : string (1 char)
+# "b" : byte (1)
+# "h" : short (2)
+# "s" : string (1 char), or "20s" for 20 char
 # ...
 ```
+
 
 vv
 
