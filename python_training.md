@@ -1660,8 +1660,8 @@ very customizable C-struct representation
 >>> pack('>hhl', 1, 2, 3)
 b'\x00\x01\x00\x02\x00\x00\x00\x03'
 
->>> pack('10sbh', b'hello', 2, 5)
-b'hello\x00\x00\x00\x00\x00\x02\x00\x05\x00'
+>>> pack('>10sbh', b'hello', 2, 5)
+b'hello\x00\x00\x00\x00\x00\x02\x00\x05'
 
 >>> unpack('>hhl', b'\x00\x01\x00\x02\x00\x00\x00\x03')
 (1, 2, 3)
@@ -1686,7 +1686,7 @@ EXO (07-struct)
 #
 #   lot_number  : string[20]
 #   die_count   : unsigned word
-#   dies:
+#   dies: (array, repeated * die_count)
 #   x           : unsigned word
 #   y           : unsigned word
 #   bin         : unsigned byte
@@ -1707,7 +1707,7 @@ with open(<filename>, "rb") as f:
 ```
 
 ```
-a value = unpack(<format>, <data>)
+a_value = unpack(<format>, <data>)
 ```
 
 then consume data...
@@ -1780,7 +1780,9 @@ Example
 --
 
 re.match : from the beginning
+
 re.search : search in the whole string
+
 and many other...
 
 ```
@@ -1809,9 +1811,6 @@ P61F76-5   AB008B  ABAAAB  98.54%
 P61F76-14  AB008B  ABAAAB  98.00%
 P61F76-13  AB008B  ABAAAB  98.29%
 ```
-
-
-vv
 
 
 >>
