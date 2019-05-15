@@ -1698,6 +1698,23 @@ Build a reader and a writer for this file using struct package.
 
 vv
 
+TIPS
+--
+
+```
+with open(<filename>, "rb") as f:
+    data = f.read(<len>)
+```
+
+```
+a value = unpack(<format>, <data>)
+```
+
+then consume data...
+    
+
+vv
+
 
 SOLUCE
 --
