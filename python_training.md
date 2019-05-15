@@ -1514,6 +1514,19 @@ for file in glob.glob('**/*.csv', recursive=True):   # recursive
 vv
 
 
+finally
+--
+* os, shutil : navigation and tools
+* glob : search
+* fnmatch : filtering
+
+
+* pathlib : aggregated to a Path class
+
+
+vv
+
+
 Text files
 --
 ``obj = open(filename, mode)``
