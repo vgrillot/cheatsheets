@@ -2313,6 +2313,8 @@ http://media.jehaisleprintemps.net/talks/pep8-talk/ --
 https://github.com/upalr/Python-camp --
 https://devblogs.microsoft.com/python/python-in-visual-studio-code-april-2019-release/ --
 https://medium.com/netflix-techblog/python-at-netflix-bba45dae649e --
+https://www.dabeaz.com/ --
+https://pbpython.com/ --
 
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
