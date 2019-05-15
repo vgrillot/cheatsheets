@@ -1652,18 +1652,25 @@ from struct import pack, unpack, iter_unpack, calcsize
 
 vv
 
+
 Struct example
 --
-
+very customizable C-struct representation
 ```
 >>> pack('>hhl', 1, 2, 3)
 b'\x00\x01\x00\x02\x00\x00\x00\x03'
 
+>>> pack('10sbh', b'hello', 2, 5)
+b'hello\x00\x00\x00\x00\x00\x02\x00\x05\x00'
+
 >>> unpack('>hhl', b'\x00\x01\x00\x02\x00\x00\x00\x03')
 (1, 2, 3)
 
+>>> unpack('5s', b'hello')
+(b'hello',)  # it always return a tuple
+
 >>> calcsize('>hhl')
-8
+8   # bytes count
 ```
 
 
