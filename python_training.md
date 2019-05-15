@@ -1304,6 +1304,15 @@ def my_odd_generator():
 
 vv
 
+Generator
+--
+
+> A generator is a function that produces a sequence of results instead of a single value
+
+> Instead of returning a value, you __generate__ a series of values (using yield)
+
+> Best use with for statement
+
 
 Lazy
 --
