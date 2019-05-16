@@ -2138,7 +2138,7 @@ def do_task(task_name):
 vv
 
 
-### equivalent to 
+### equivalent
 
 
 ```
@@ -2184,9 +2184,6 @@ vv
 build a cache decorator
 
 > see exo-decorator/exo-cache
-
-
->>
 
 
 
@@ -2247,6 +2244,7 @@ Pandas
 
 
 ![](img/one-more-thing-jobs.jpg)
+
 A couple of other type...
 
 
@@ -2406,6 +2404,12 @@ DuctTyping
 
 > If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck.
 
+
+vv
+
+
+### DuctTyping
+
 Trivial example:
 ```
 class Car(object):
@@ -2421,8 +2425,14 @@ class Person(object):
         self.birth_date = birth_date
         
     def ref_date(self):
-        return self.birth_date
-      
+        return self.birth_date      
+```
+
+
+vv
+
+
+```
       
 def get_age(any_object):
     """compute the age"""
