@@ -1720,7 +1720,6 @@ SOLUCE
 --
 
 ```
-
 #  READER
 with open("results.bin", "rb") as f:
     data = f.read(20)
@@ -1736,7 +1735,6 @@ with open("results.bin", "rb") as f:
         data = f.read(5)
         x, y, b = unpack('HHB', data)
         print(f'{x}, {y} -> {b}')
-
 ```
 
 
@@ -2131,7 +2129,25 @@ def do_task(task_name):
     print("Doing %s..." % task_name)
     
     
-# equivalent to 
+>>> do_task("read the doc!")
+'reminder !!!'
+'Doing read the doc!...'
+```
+
+
+vv
+
+
+### equivalent to 
+
+
+```
+@memo
+def do_task(task_name):
+    print("Doing %s..." % task_name)
+```
+is equivalent to 
+```
 memo(do_task)("support")    
 ```
 
@@ -2140,7 +2156,7 @@ vv
 
 
 ### Basic decorator
-write a debug function
+write a debug function to log all call
 ```
 def goto_room(room_name):
     print(f"entering {room_name}")
@@ -2149,6 +2165,8 @@ def goto_room(room_name):
 goto_room("kitchen")
 ```
 > see exo-decorator/example-basic
+
+tip:remember a function is an object and has properties !
 
 
 vv
