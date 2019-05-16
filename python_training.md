@@ -1862,7 +1862,9 @@ DESCRIPTION
     ...
 ```
 
+
 vv
+
 
 class structure
 --
@@ -1870,10 +1872,17 @@ class structure
 ```
 class MyObject(ParentObject):
     """doc string..."""
+    
+    count = 0  # class member
+    
     def __init__(self, param, other_params....):
        #  constructor
        self.member = param  # member declaration
+       
+    def do_something(self):
+        print("doing something...")
 ```
+
 
 vv
 
@@ -2284,11 +2293,11 @@ Pandas
 > see exo-panda
 
 
-vv
+>>
 
 
-Logging
---
+Logger
+==
 Quickly:
 ```
 import logging
@@ -2301,11 +2310,11 @@ logger.error('oups, I did it again')
 you can reformat or add many handlers.
 
 
-vv
+>>
 
 
 Decorators
---
+==
 a decorator can wrap or change the behavior of your function without touching your code.
 
 ```
@@ -2321,11 +2330,42 @@ def do_task(task_name):
     
 # equivalent to 
 memo(do_task)("support")    
-
 ```
 
 
 vv
+
+
+### Basic decorator
+write a debug function
+```
+def goto_room(room_name):
+    print(f"entering {room_name}")
+
+
+goto_room("kitchen")
+```
+> see exo-decorator/example-basic
+
+
+vv
+
+
+### More decorator
+with a wrapper, you can run code before and after calling function
+
+> see exo-decorator/example-full
+
+
+vv
+
+### Advanced decorator
+build a cache decorator
+
+> see exo-decorator/exo-cache
+
+
+>>
 
 
 DuctTyping
@@ -2339,7 +2379,6 @@ class Car(object):
     def __init__(self, first_buy):
         self.first_buy = first_buy
         
-    @property 
     def ref_date(self):
         return self.first_buy
       
@@ -2348,7 +2387,6 @@ class Person(object):
     def __init__(self, birth_date):
         self.birth_date = birth_date
         
-    @property
     def ref_date(self):
         return self.birth_date
       
@@ -2356,37 +2394,9 @@ class Person(object):
 def get_age(any_object):
     """compute the age"""
     if any_object.has_attr("ref_date"):
-        return 2019 - any_object.ref_date        
+        return 2019 - any_object.ref_date()        
 
 ```
-
-TODO : http://sametmax.com/quest-ce-que-le-duck-typing-et-a-quoi-ca-sert/
-
-
-vv
-
-
-ArgParse
---
-TODO
-
-
-vv
-
-
-Application
---
-Build a desktop application with WxPython
-https://wxpython.org/
-
-
-vv
-
-
-Web app
---
-* Django
-* Flask
 
 
 >>
@@ -2394,9 +2404,13 @@ Web app
 
 Code & play
 ==
-#### www.codingame.com
+
+fun is the best way to learn...
+### www.codingame.com
 ![codingame](img/codingame-get-better-at-coding.jpg)
 
+join me at 
+https://www.codingame.com/servlet/urlinvite?u=316274
 
 >>
 
