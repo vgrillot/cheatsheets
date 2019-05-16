@@ -1830,14 +1830,14 @@ vv
 Introspection
 --
 
-you can directly read information or request help in your code:
+you can directly read information 
+
+or request help in your code:
 ```
 >>> import struct
 
-
 # will display all function list:
 >>> dir(struct)
-
 ['Struct', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_clearcache', 'calcsize', 'error', 'iter_unpack', 'pack', 'pack_into', 'unpack', 'unpack_from']
 
 # display a full help
@@ -1864,8 +1864,21 @@ DESCRIPTION
 
 vv
 
-
 class structure
+--
+
+```
+class MyObject(ParentObject):
+    """doc string..."""
+    def __init__(self, param, other_params....):
+       #  constructor
+       self.member = param  # member declaration
+```
+
+vv
+
+
+class example
 --
 
 > See exo-classes
@@ -1937,7 +1950,7 @@ class WaferDieResult(DieResult):
     ...
     def __str__(self)__:
         s = "PASS" if self.good else "FAIL"
-        return f"{s} at ({x}, {y})"
+        return f"{s} at ({self.x}, {self.y})"
         
 >>> die = WaferDieResult(30, 40, True)  # another good die
 >>> die
@@ -2088,7 +2101,7 @@ Exo (07-struct)
 --
 Back to the previous exercise, 
 
-Improve binary file reader/writer using context manager.    
+Improve binary file reader/writer using object and context manager.    
     
     
 >>
@@ -2158,11 +2171,15 @@ class Lot:
     waf_list : list[int]
 ```
 
-Usage:
+vv
+
+
+Dataclass usage:
 ```
 qt1234 = Lot("QT1234", "AB001", "ABACAD", [1,2,3,4,5])
-
 ```
+
+> best futur use of ORM !
 
 
 >>
@@ -2176,7 +2193,10 @@ Typing
 
 Sometimes it can be usefull...
 
-Don't play _captain obvious_.
+Mostly using framework with lot of classes
+
+
+Please don't play _captain obvious_.
 
 ```
 def hello(name : str) -> str:
@@ -2192,7 +2212,9 @@ One more thing
 
 ![](img/one-more-thing-jobs.jpg)
 
+
 vv
+
 
 Statistics
 --
@@ -2360,6 +2382,7 @@ https://devblogs.microsoft.com/python/python-in-visual-studio-code-april-2019-re
 https://medium.com/netflix-techblog/python-at-netflix-bba45dae649e --
 https://www.dabeaz.com/ --
 https://pbpython.com/ --
+https://pandas.pydata.org/ --
 
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
