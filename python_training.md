@@ -2253,10 +2253,8 @@ Numpy
 vv
 
 
-Plot
+matplotlib
 --
-
-### matplotlib
 
 > see exo-plot
 
@@ -2271,8 +2269,6 @@ values = line.split(" ")
 plt.plot(values)
 plt.savefig("pix")
 ```
-
-> easy to use with pandas
 
 
 vv
@@ -2293,10 +2289,16 @@ vv
 
 Logging
 --
-TODO
+Quickly:
 ```
 import logging
+
+logger = logging.getLogger()    # root logger
+logger.setLevel(logging.DEBUG)
+logger.debug('blah blahhh')
+logger.error('oups, I did it again')
 ```
+you can reformat or add many handlers.
 
 
 vv
