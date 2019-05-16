@@ -2494,6 +2494,8 @@ https://python-guide-chinese.readthedocs.io/zh_CN/latest/writing/style.html --
 https://2.python-requests.org//en/master/ --
 https://www.pythoncentral.io/ --
 </small>
+
+
 vv
 
 more links
@@ -2519,11 +2521,19 @@ http://gillesfabio.com/ --
 http://book.pythontips.com/ --
 </small>
 
+
+vv
+
+
 more links
 --
 
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
+
+
+vv
+
 
 thanks
 --
