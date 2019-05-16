@@ -2116,6 +2116,125 @@ Improve binary file reader/writer using object and context manager.
 >>
 
 
+Decorators
+==
+a decorator can wrap or change the behavior of your function without touching your code.
+
+```
+def memo(func):
+    print("reminder !!!")
+    return func
+        
+
+@memo
+def do_task(task_name):
+    print("Doing %s..." % task_name)
+    
+    
+# equivalent to 
+memo(do_task)("support")    
+```
+
+
+vv
+
+
+### Basic decorator
+write a debug function
+```
+def goto_room(room_name):
+    print(f"entering {room_name}")
+
+
+goto_room("kitchen")
+```
+> see exo-decorator/example-basic
+
+
+vv
+
+
+### More decorator
+with a wrapper, you can run code before and after calling function
+
+> see exo-decorator/example-full
+
+
+vv
+
+### Advanced decorator
+build a cache decorator
+
+> see exo-decorator/exo-cache
+
+
+>>
+
+
+
+>>
+
+
+![](img/one-more-thing-jobs.jpg)
+
+
+>>
+
+
+Statistics
+==
+
+Numpy
+--  
+
+- numerical computation
+- matrix
+
+
+vv
+
+
+matplotlib
+--
+
+> see exo-plot
+
+```
+import matplotlib.pyplot as plt
+
+with open("pix.txt") as f:
+    line = f.readline()
+
+values = line.split(" ")
+
+plt.plot(values)
+plt.savefig("pix")
+```
+
+
+vv
+
+
+Pandas
+--
+
+- data structure
+- statistics
+- time series
+
+> see exo-panda
+
+
+>>
+
+
+![](img/one-more-thing-jobs.jpg)
+A couple of other type...
+
+
+>>
+
+
 Enum
 ==
 This is done by a class
@@ -2245,56 +2364,7 @@ x: Set[int] = {6, 7}
 
 ![](img/one-more-thing-jobs.jpg)
 
-
-vv
-
-
-Statistics
-==
-
-Numpy
---  
-
-- numerical computation
-- matrix
-
-
-vv
-
-
-matplotlib
---
-
-> see exo-plot
-
-```
-import matplotlib.pyplot as plt
-
-with open("pix.txt") as f:
-    line = f.readline()
-
-values = line.split(" ")
-
-plt.plot(values)
-plt.savefig("pix")
-```
-
-
-vv
-
-
-Pandas
---
-
-- data structure
-- statistics
-- time series
-
-> see exo-panda
-
-
 >>
-
 
 Logger
 ==
@@ -2308,61 +2378,6 @@ logger.debug('blah blahhh')
 logger.error('oups, I did it again')
 ```
 you can reformat or add many handlers.
-
-
->>
-
-
-Decorators
-==
-a decorator can wrap or change the behavior of your function without touching your code.
-
-```
-def memo(func):
-    print("reminder !!!")
-    return func
-        
-
-@memo
-def do_task(task_name):
-    print("Doing %s..." % task_name)
-    
-    
-# equivalent to 
-memo(do_task)("support")    
-```
-
-
-vv
-
-
-### Basic decorator
-write a debug function
-```
-def goto_room(room_name):
-    print(f"entering {room_name}")
-
-
-goto_room("kitchen")
-```
-> see exo-decorator/example-basic
-
-
-vv
-
-
-### More decorator
-with a wrapper, you can run code before and after calling function
-
-> see exo-decorator/example-full
-
-
-vv
-
-### Advanced decorator
-build a cache decorator
-
-> see exo-decorator/exo-cache
 
 
 >>
