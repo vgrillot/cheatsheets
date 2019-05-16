@@ -2493,11 +2493,17 @@ https://www.pythoncentral.io/category/python-tips-tricks-hacks-idioms/ --
 https://python-guide-chinese.readthedocs.io/zh_CN/latest/writing/style.html --
 https://2.python-requests.org//en/master/ --
 https://www.pythoncentral.io/ --
+</small>
+vv
+
+more links
+--
+
+<small>
 http://sametmax.com/ (NSFW!) --
 https://en.wikipedia.org/wiki/Python_(programming_language) --
 https://fr.wikipedia.org/wiki/Guido_van_Rossum --
 http://introtopython.org/classes.html --
-https://droub.site44.com/ --
 https://inventwithpython.com/blog/2018/08/17/the-zen-of-python-explained/ --
 https://treyhunner.com/ --
 https://www.pythonforbeginners.com/cheatsheet/python-file-handling -- 
@@ -2511,10 +2517,21 @@ https://pandas.pydata.org/ --
 https://mypy.readthedocs.io/ --
 http://gillesfabio.com/ --
 http://book.pythontips.com/ --
+</small>
+
+more links
+--
 
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
 
+thanks
+--
+to David Roubinet to show me the light ;)
+
+https://droub.site44.com/ --
+
+Presentation done with Reveal.js
+
 https://github.com/hakimel/reveal.js --
 
-</small>
