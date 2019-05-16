@@ -2187,13 +2187,14 @@ qt1234 = Lot("QT1234", "AB001", "ABACAD", [1,2,3,4,5])
 
 Typing
 ==
-(python > 3.5)
-
-> You're missing some type information ?
+>Are you missing types ?
 
 Sometimes it can be usefull...
 
 Mostly using framework with lot of classes
+
+
+vv
 
 
 Please don't play _captain obvious_.
@@ -2201,14 +2202,37 @@ Please don't play _captain obvious_.
 ```
 def hello(name : str) -> str:
     return f"Hello {name}"
+    
+any_var: str
+other_number: int = 27     
+another_number = 27 # type: int     
+```
+
+
+vv
+
+
+For simple built-in types, just use the name of the type
+```
+x: int = 1
+x: float = 1.0
+x: bool = True
+x: str = "test"
+x: bytes = b"test"
+```
+
+For collections, the name of the type is capitalized, 
+and the name of the type inside the collection is in brackets
+```
+from typing import List, Set, Dict, Tuple, Optional
+
+x: List[int] = [1]
+x: Set[int] = {6, 7}
 ```
 
 
 >>
 
-
-One more thing
-==
 
 ![](img/one-more-thing-jobs.jpg)
 
@@ -2217,22 +2241,16 @@ vv
 
 
 Statistics
---
+==
 
-### Numpy  
+Numpy
+--  
 
 - numerical computation
 - matrix
 
-### Pandas
-
-- data structure
-- statistics
-- time series
-
 
 vv
-
 
 
 Plot
@@ -2260,20 +2278,25 @@ plt.savefig("pix")
 vv
 
 
+Pandas
+--
+
+- data structure
+- statistics
+- time series
+
+> see exo-panda
+
+
+vv
+
+
 Logging
 --
 TODO
 ```
 import logging
 ```
-
-
-vv
-
-
-Unit tests
---
-TODO
 
 
 vv
@@ -2291,6 +2314,33 @@ DuctTyping
 --
 
 > If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck.
+
+Trivial example:
+```
+class Car(object):
+    def __init__(self, first_buy):
+        self.first_buy = first_buy
+        
+    @property 
+    def ref_date(self):
+        return self.first_buy
+      
+      
+class Person(object):
+    def __init__(self, birth_date):
+        self.birth_date = birth_date
+        
+    @property
+    def ref_date(self):
+        return self.birth_date
+      
+      
+def get_age(any_object):
+    """compute the age"""
+    if any_object.has_attr("ref_date"):
+        return 2019 - any_object.ref_date        
+
+```
 
 TODO : http://sametmax.com/quest-ce-que-le-duck-typing-et-a-quoi-ca-sert/
 
@@ -2383,6 +2433,7 @@ https://medium.com/netflix-techblog/python-at-netflix-bba45dae649e --
 https://www.dabeaz.com/ --
 https://pbpython.com/ --
 https://pandas.pydata.org/ --
+https://mypy.readthedocs.io/ --
 
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
