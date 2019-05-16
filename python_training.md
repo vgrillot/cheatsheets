@@ -2306,7 +2306,23 @@ vv
 
 Decorators
 --
-TODO
+a decorator can wrap or change the behavior of your function without touching your code.
+
+```
+def memo(func):
+    print("reminder !!!")
+    return func
+        
+
+@memo
+def do_task(task_name):
+    print("Doing %s..." % task_name)
+    
+    
+# equivalent to 
+memo(do_task)("support")    
+
+```
 
 
 vv
@@ -2436,6 +2452,8 @@ https://www.dabeaz.com/ --
 https://pbpython.com/ --
 https://pandas.pydata.org/ --
 https://mypy.readthedocs.io/ --
+http://gillesfabio.com/ --
+http://book.pythontips.com/ --
 
 https://www.tiobe.com/tiobe-index/python/ --
 https://www.tiobe.com/tiobe-index/ --
